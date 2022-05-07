@@ -1,0 +1,35 @@
+{
+  "login": {
+    "welcome": "ورود",
+    "details": "مشخصات کاربری خود را وارد نمایید",
+    "userName": "نام کاربری",
+    "password": "رمز عبور",
+    "login": "ورود به داشبورد",
+    "Register": "رمز عبورت یادت نیست؟",
+    "forgetPassword": "ثبت نام نکردی؟",
+    "errorUserName": "لطفا نام کاربری خود را وارد نمایید",
+    "errorPassword": "لطفا رمز عبور را وارد نمایید",
+    "errorPasswordLength": "رمز عبور باید حداقل 6 کاراکتر باشد"
+  },
+  "loginToDashbord": {
+    "welcome": "خوش اومدی",
+    "details": "مشخصات بیزینست رو بنویس",
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "companyName": "نام شرکت",
+    "CompanyActivity": "نوع فعالیت شرکت",
+    "login": "ورود به داشبورد",
+    "errorFirstName": "لطفا نام  خود را وارد نمایید",
+    "errorLastName": "لطفا نام خانوادگی را وارد نمایید",
+    "errorNameCompany": "لطفا نام شرکت خود را وارد نمایید",
+    "errorCompanyActivity": "لطفا نوع فعالیت شرکت را وارد نمایید",
+    "TextConfirmation": "با کلیک روی کلید داشبورد تایید میکنید که قوانین و مقررات استفاده از نرم افزار تساوی را خوانده و قبول دارید"
+  },
+  "phoneverification": {
+    "title": "تایید شماره تلفن",
+    "confirmVerification": "کد دریافتی را در کادر زیر دریافت کنید",
+    "authenticationCode": "کد تایید هویت",
+    "errorConfirmVerification":"لطفا کد تاییدیه را در کادر بالا وارد نمایید",
+    "login": "تایید"
+  }
+}
