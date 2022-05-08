@@ -27,9 +27,6 @@ const PhoneVerification = () => {
 
   return (
     <React.Fragment>
-      <div>
-        <button>Change Page</button>
-      </div>
 
       <div className="fixed mt-12 w-[1600px] mx-auto blur-sm">
         <Image

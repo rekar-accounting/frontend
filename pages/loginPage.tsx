@@ -74,9 +74,6 @@ const LoginPage: React.FC<propsList> = (props) => {
 
   return (
     <React.Fragment>
-      <div>
-        <button onClick={pageHandler}>Change Page</button>
-      </div>
       <div className="fixed mt-12 w-[1600px]  mx-auto blur-sm">
         <Image
           src="/login-artwork.png"
