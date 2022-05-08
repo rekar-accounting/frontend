@@ -1,7 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Card from "./Component/Card"
+import Card from "./Component/Card";
+import Hazhar from './Component/Slider24'
+
+
 
 const Home: NextPage = () => {
   return (
@@ -14,22 +17,10 @@ const Home: NextPage = () => {
           <Link href="/"> ورود </Link>
         </div>
         <div className=" flex ml-auto text-xs ">
-          <a href="/" className="p-2">
-            {" "}
-            تماس با ما{" "}
-          </a>
-          <a href="/" className="p-2">
-            {" "}
-            چرا ریکار{" "}
-          </a>
-          <a href="/" className="p-2">
-            {" "}
-            درباره{" "}
-          </a>
-          <a href="/" className="p-2">
-            {" "}
-            خانه{" "}
-          </a>
+          <a href="/" className="p-2">{" "}تماس با ما{" "}</a>
+          <a href="/" className="p-2">{" "}چرا ریکار{" "}</a>
+          <a href="/" className="p-2">{" "}درباره{" "}</a>
+          <a href="/" className="p-2">{" "}خانه{" "}</a>
         </div>
         <img src="IMG/rekar-logotype.svg" alt="" />
       </nav>
@@ -68,12 +59,26 @@ const Home: NextPage = () => {
           <ul>
             <li className=" pt-6 text-sm"> حذف پروسه نصب نرم افزار حسابداری </li>
             <li className=" pt-3 text-sm"> دسترسی به سیستم از هرجا و در هر زمان </li>
-            <li className=" pt-3 text-sm"> طراحی کاربردی فوق العاده مینیمال و کاربردی </li>
+            <li className=" pt-3 text-sm"> طراحی کاربری فوق العاده مینیمال و کاربردی </li>
             <li className=" pt-3 text-sm"> پشتیبانی یک ساله </li>
           </ul>
         </div>
-        <div className=" mx-auto w-1/2">
+        <div className=" mx-auto w-1/2 my-auto">
           <img src="IMG/people-artwork.svg" alt="" />
+        </div>
+      </div>
+      <div>
+        <Hazhar />
+      </div>
+      <div className=" flex">
+        <form action="">
+          <input type="email" placeholder=" ایمیل شما " required className=" text-right w-96 h-10 bg-slate-200 rounded-lg text-xs outline-none px-3 mx-auto" /><br />
+          <input type="text" placeholder=" متن پیام " required className=" text-right w-96 h-32 bg-slate-200 mt-4 rounded-lg outline-none pb-24 px-3 text-xs mx-auto" /><br />
+          <input type="submit" value=" ارسال "  className=" border w-96 h-12 mt-4 rounded-lg bg-violet-800 text-white font-bold " />
+        </form>
+        <div className=" text-center mx-auto">
+          <h1 className=" text-2xl font-bold"> تماس با ما </h1>
+          <p className=" text-slate-500"> با استفاده از فرم روبه رو با ما در تماس باشید </p>
         </div>
       </div>
     </div>
