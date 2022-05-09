@@ -1,31 +1,33 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
 import Card from "./Component/Card";
 import Hazhar from './Component/Slider24'
+import { ImFacebook } from "react-icons/im";
+import { ImTwitter } from "react-icons/im";
+import { ImGoogle } from "react-icons/im";
 
 
 
 const Home: NextPage = () => {
   return (
-    <div className="container mx-auto w-2/3 mb-20 lg:w-container  ">
-      <nav className="flex items-center border-2 border-none h-10 mt-4 border-box">
-        <div className=" border border-violet-500 w-36 hover:bg-violet-100 h-8 rounded-md text-center text-sm text-slate-500 pt-1 ml-10 box-border">
+    <div className="container mx-auto w-2/3 mb-20 sm:w-screen md:w-2/3 lg:w-2/3 ">
+      <nav className="flex items-center border-2 border-none h-10 mt-4 border-box sm:w-container md:w-full lg:w-container">
+        <div className=" border border-violet-500 w-36 hover:bg-violet-100 h-8 rounded-md text-center text-xs text-slate-500 pt-2 ml-10 box-border">
           <Link href="/"> افتتاح حساب </Link>
         </div>
         <div className=" pl-5 text-violet-600 text-sm pb-1">
           <Link href="/"> ورود </Link>
         </div>
-        <div className=" flex ml-auto text-xs ">
+        <div className=" flex text-xs sm:justify-around md:justify-end lg:ml-auto">
           <a href="/" className="p-2">{" "}تماس با ما{" "}</a>
           <a href="/" className="p-2">{" "}چرا ریکار{" "}</a>
           <a href="/" className="p-2">{" "}درباره{" "}</a>
           <a href="/" className="p-2">{" "}خانه{" "}</a>
         </div>
-        <img src="IMG/rekar-logotype.svg" alt="" />
+        <img src="IMG/rekar-logotype.svg" alt="rekarlogotype" />
       </nav>
       <div className=" flex mt-16 ml-8">
-        <div className="border-2 border-none w-80 mr-7 text-center">
+        <div className="border-2 border-none w-80 mr-7 text-center sm:col ">
           <img className=" mx-auto pt-14" src="IMG/rekar-logo.svg" />
           <h1 className=" text-center font-bold text-purple-900 pt-4"> دسترسی بینهایت به سیستم </h1>
           <p className="text-xs text-center text-slate-400"> با افتتاح حساب در سیستم جامع حسابداری ریکار ، از هرجا و با استفاده از هر دیوایس میتوانید به راحتی وارد داشبورد حساب خود شده و به آسانی به تمامی داده ها دسترسی داشته باشی </p>
@@ -33,7 +35,7 @@ const Home: NextPage = () => {
             <Link href='/'> خرید حساب کاربری </Link>
           </button>
         </div>
-        <div>
+        <div className=" sm:flex sm:pr-16 lg:mx-auto lg:ml-auto">
           <img className=" mx-auto ml-16" src="IMG/bank-artwork.svg"/>
         </div>
       </div>
@@ -81,31 +83,38 @@ const Home: NextPage = () => {
           <p className=" text-slate-500"> با استفاده از فرم روبه رو با ما در تماس باشید </p>
         </div>
       </div>
-      <div className=" w-full my-16 bg-zinc-900 h-72 ">
-        <footer className=" flex justify-around text-xs pt-24 indent-14 ">
+      <div className=" w-full my-16 bg-zinc-900 h-64 ">
+        <footer className=" flex justify-around text-xs pt-16">
           <div className="col">
             <ul>
-              <li className=" text-right text-white whitespace-pre"> 
-                <Link href='/' > فیسبوک </Link><br />
-                <Link href='/' > تویتر </Link><br />
-                <Link href='/' > جی میل </Link><br />
+              <li className=" text-right text-white "> 
+                <a href='#' > فیسبوک </a><br /><br />
+                <a href='#' > تویتر </a><br /><br />
+                <a href='#' >جی میل </a><br /><br />
               </li>
+            </ul>
+          </div>
+          <div>
+            <ul className=" text-white">
+              <li className=" pt-1"> <ImFacebook /> </li>
+              <li className=" pt-5"> <ImGoogle/> </li>
+              <li className=" pt-5"> <ImTwitter/> </li>
             </ul>
           </div>
           <div className="col ">
             <ul className=" text-right text-white">
-              <Link href='/' > لینک </Link><br />
-              <Link href='/' > لینک </Link><br />
-              <Link href='/' > لینک </Link><br />
+              <Link href='/' > لینک </Link><br /><br />
+              <Link href='/' > لینک </Link><br /><br />
+              <Link href='/' > لینک </Link><br /><br />
               <Link href='/' > لینک </Link>
             </ul>
           </div>
           <div className="col ">
-            <ul className=" text-right text-white">
-              <Link href='/' > خانه </Link><br />
-              <Link href='/' > درباره </Link><br />
-              <Link href='/' > چرا ریکار </Link><br />
-              <Link href='/' > تماس با ما </Link><br />
+            <ul className=" text-right text-white pb-3">
+              <Link href='/' > خانه </Link><br /><br />
+              <Link href='/' >  درباره </Link><br /><br />
+              <Link href='/' > چرا ریکار </Link><br /><br />
+              <Link href='/' > تماس با ما </Link><br /><br />
               <Link href='/' > ورود </Link><br />
             </ul>
           </div>
@@ -113,7 +122,7 @@ const Home: NextPage = () => {
             <img src="IMG/rekar-logo.svg" alt="" />
           </div>
         </footer>
-        <div className=" border border-none bg-zinc-600 mt-12 h-12">
+        <div className=" border border-none bg-zinc-600 h-12">
           <div className=" flex justify-around col">
             <p className=" text-xs text-white pt-3 pl-9"> Copyright @ 2020 , Rekar </p>
             <div className=" text-white text-xs pt-3 pl-44">
