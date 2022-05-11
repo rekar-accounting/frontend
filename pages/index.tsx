@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import Card from "./Component/Card";
-import Hazhar from './Component/Slider24'
+import Card from "../components/Card";
+import Hazhar from '../components/Slider24'
 import { ImFacebook } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
 import { ImGoogle } from "react-icons/im";
