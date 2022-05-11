@@ -1,7 +1,9 @@
 import next from "next";
+import React from "react";
 
 
-export default function Card (props) {
+
+export default function Card (props:any) {
   return (
     <div className="border border-none w-56 h-72 ">
         <img src={props.img} className=" mx-auto mt-3" />
