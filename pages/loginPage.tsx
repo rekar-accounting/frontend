@@ -121,13 +121,11 @@ const LoginPage: React.FC<propsList> = (props) => {
                 </div>
               </div>
               <div className="mt-16 mr-24">
-                <button className="w-[72%] py-3 font-bold text-purple-700 border-2 border-purple-700 ">
-                  {translate.login}
-                </button>
-
-                <button className="w-[72%] py-3 font-bold text-purple-700 border-2 border-purple-700 ">
-                  {translate.loginTo}
-                </button>
+                <Link href="/phoneVerification">
+                  <button className="w-[72%] py-3 font-bold text-purple-700 border-2 border-purple-700 ">
+                    {translate.login}
+                  </button>
+                </Link>
               </div>
             </form>
             <div>{check && <ErrorModalHandler title={errorMessage} />}</div>
