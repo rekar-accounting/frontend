@@ -10,7 +10,8 @@
     "forgetPassword": "Did Not Register?",
     "errorUserName": "Please Enter Your Username",
     "errorPassword": "Please Enter The Password",
-    "errorPasswordLength": "Password Must Be at Least 6 Characters Long"
+    "errorPasswordLength": "Password Must Be at Least 6 Characters Long",
+    "loginTo": "loginTo"
   },
   "welcomePage": {
     "welcome": "Your Welocme",
