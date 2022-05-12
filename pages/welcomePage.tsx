@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import ErrorModalHandelr from "./ErrorModalHandelr";
+import ErrorModalHandler from "../components/errorModalHandelr";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import { loginToDashbord } from "../public/locales/fa.json";
+import { welcomePage } from "../public/locales/fa.json";
 
-type propsList = {
+type PropsList = {
   handleNextLoginPage: () => void;
 };
 
-const LoginToDoashbord: React.FC<propsList> = (props) => {
+const WelcomePage: React.FC<PropsList> = (props) => {
   const [testFirstName, setTestName] = useState<string | number>("");
   const [testLastName, setTestLastName] = useState<string | number>("");
   const [testCompanyName, setTestCompanyName] = useState<string | number>("");
@@ -19,22 +19,7 @@ const LoginToDoashbord: React.FC<propsList> = (props) => {
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
 
-  let translate = loginToDashbord;
-
-  //////////////change Language
-
-  //const { locale } = useRouter();
-  //let router = useRouter();
-  //const onChangeHandler = () => {
-  // switch (locale) {
-  //   case "fa":
-  //   router.push("/", "/", { locale: "en-US" });
-  //    break;
-  //  case "en-US":
-  //   router.push("/", "/", { locale: "fa" });
-  //  break;
-  // }
-  // };
+  let translate = welcomePage;
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestName(event.target.value);
@@ -87,28 +72,28 @@ const LoginToDoashbord: React.FC<propsList> = (props) => {
   };
 
   return (
-    <React.Fragment>
-      <div className="fixed mt-12 w-[1600px] mx-auto blur-sm">
+    <>
+      <div className="fixed mx-auto mt-12 blur-sm">
         <Image
           src="/login-artwork.png"
           height={580}
           width={1260}
-          alt="loginImage"
+          alt={translate.alt}
           className="mx-auto scale-y-150 bg-white border-2 border-whitet "
         />
       </div>
-      <div className="absolute w-[1050px] mx-auto mt-24 overflow-hidden h-[547px]  bg-white shadow-lg bottom-8 left-36 rounded-2xl ">
-        <section className="grid grid-cols-2 px-2 pb-4 sm:grid-rows-1">
+      <div className="absolute  mx-auto mt-24 overflow-hidden h-[547px] flex-row  bg-white shadow-lg bottom-8 left-36 rounded-2xl ">
+        <section className="grid grid-cols-2 px-2 pb-4 sm:gird-cols-1 sm sm:grid-rows-1">
           <div className="">
             <Image
               width={500}
               height={520}
-              alt="صفحه ورود"
+              alt=""
               src="/login-artwork.png "
               className="object-cover w-full "
             />
           </div>
-          <div className="w-full pt-10 pr-10 text-right bg-white ">
+          <div className="w-56 pt-10 pr-10 text-right bg-white sm:w-full ">
             <p className="mb-3 text-2xl font-bold text-center text-purple-700 login">
               {translate.welcome}
             </p>
@@ -119,55 +104,56 @@ const LoginToDoashbord: React.FC<propsList> = (props) => {
                 <div dir="rtl">
                   <input
                     type="text"
-                    className="w-[400px] mb-6  focus:outline-none border-4 border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500"
+                    className="w-[400px] mb-6 font-semibold	  	 text-lg  focus:outline-none border-4 border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500"
                     placeholder={translate.firstName}
                     onChange={usernamechangehandler}
                   />
                 </div>
                 <div dir="rtl">
                   <input
-                    type="password"
-                    className="w-[400px] border-4 mb-6 focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
+                    type="text"
+                    className="w-[400px] border-4 mb-6 font-semibold		 text-lg focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
                     placeholder={translate.lastName}
                     onChange={passwordchangehandler}
                   />
                 </div>
                 <div dir="rtl">
                   <input
-                    type="password"
-                    className="w-[400px] border-4 mb-6 focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
+                    type="text"
+                    className="w-[400px] border-4 mb-6 font-semibold		 text-lg focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
                     placeholder={translate.companyName}
                     onChange={companyNamechangehandler}
                   />
                 </div>
                 <div className="relative">
-                  <div dir="rtl">
-                    <input
-                      type="password"
-                      className="w-[400px] border-4 mb-6 focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
-                      placeholder={translate.CompanyActivity}
-                      onChange={companyActionchangehandler}
-                    />
+                  <div dir="rtl" className="flex">
+                    <select className="w-[400px] border-4 mb-6 font-semibold appearance-none text-lg focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500  ">
+                      <option value="">{translate["listCompany-first"]}</option>
+                      <option value="">
+                        {translate["listCompany-second"]}
+                      </option>
+                      <option value="">{translate["listCompany-third"]}</option>
+                    </select>
+                    <ChevronDownIcon className="absolute w-6 h-6 right-[370px] top-2 text-fuchsia-500" />
                   </div>
-                  <ChevronDownIcon className="absolute top-0 w-6 h-7 left-16 text-fuchsia-400" />
                 </div>
-                <div>{check && <ErrorModalHandelr title={errorMessage} />}</div>
+                <div>{check && <ErrorModalHandler title={errorMessage} />}</div>
                 <div className="mt-2 mr-12">
-                  <button className="w-[72%] py-3  text-purple-700 border-2 border-purple-700 ">
+                  <button className="w-[72%] py-3 font-bold text-purple-700 border-2 border-purple-700 ">
                     {translate.login}
                   </button>
                 </div>
               </div>
             </form>
             <div className="mx-auto mt-5 w-96">
-              <p className="text-xs ">{translate.TextConfirmation}</p>
+              <p className="text-sm ">{translate.TextConfirmation}</p>
             </div>
           </div>
         </section>
         <div className="w-full h-2 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500"></div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
-export default LoginToDoashbord;
+export default WelcomePage;

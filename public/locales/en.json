@@ -5,16 +5,18 @@
     "userName": "User Name",
     "password": "Password",
     "login": "Login to Dashbord",
+    "alt": "image login",
     "Register": "Do Not Remember The Password?",
     "forgetPassword": "Did Not Register?",
     "errorUserName": "Please Enter Your Username",
     "errorPassword": "Please Enter The Password",
     "errorPasswordLength": "Password Must Be at Least 6 Characters Long"
   },
-  "loginToDashbord": {
+  "welcomePage": {
     "welcome": "Your Welocme",
     "details": "Write the details of your business",
     "firstName": "FirstName",
+    "alt": "image login",
     "lastName": "LastName",
     "companyName": "CompanyName",
     "CompanyActivity": "Type of company activity",
@@ -23,13 +25,24 @@
     "errorLastName": "Please enter your last name",
     "errorNameCompany": "Please enter your company name",
     "errorCompanyActivity": "Please enter the type of activity of the company",
-    "TextConfirmation": "By clicking on the dashboard button, you confirm that you have read and accept the terms and conditions of using the equality software."
+    "TextConfirmation": "By clicking on the dashboard button, you confirm that you have read and accept the terms and conditions of using the equality software.",
+    "listCompany-first": "Accounting",
+    "listCompany-second": "Energy Section",
+    "listCompany-third": "Importation"
   },
   "phoneVerification": {
     "title": "Confirm Phone Number",
     "confirmVerification": "Get The Received Code In The Box Below",
+    "alt": "image login",
     "authenticationCode": "Authentication Code",
     "errorConfirmVerification": "Please Enter The Verification Code In The Box Above",
     "login": "Confirmation"
+  },
+  "listCompany": {
+    "listCompanys": "listCompanys",
+    "companys": "(ثبت 2308)شرکت پاک تدبیر مکریان",
+    "fiscalYear": "fiscalYear 1401",
+    "select": "select",
+    "cancle": "cancle"
   }
 }
