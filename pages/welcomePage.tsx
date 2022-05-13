@@ -1,7 +1,7 @@
+import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import ErrorModalHandler from "../components/errorModalHandelr";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import ErrorModalHandler from "../components/errorModalHandler";
 import { welcomePage } from "../public/locales/fa.json";
 
 type PropsList = {

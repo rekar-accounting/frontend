@@ -1,6 +1,6 @@
-import React, { ChangeEvent, useState } from "react";
 import Image from "next/image";
-import ErrorModalHandelr from "../components/errorModalHandelr";
+import React, { ChangeEvent, useState } from "react";
+import ErrorModalHandler from "../components/errorModalHandler";
 import { phoneverification } from "../public/locales/fa.json";
 
 const PhoneVerification = () => {
@@ -72,7 +72,7 @@ const PhoneVerification = () => {
                   </button>
                 </div>
                 <div className="right-5">
-                  {check && <ErrorModalHandelr title={errorMessage} />}
+                  {check && <ErrorModalHandler title={errorMessage} />}
                 </div>
               </div>
             </form>

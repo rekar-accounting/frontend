@@ -1,38 +1,23 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import Link from "next/link";
-import ErrorModalHandler from "../components/errorModalHandelr";
+import ErrorModalHandler from "../components/errorModalHandler";
 import { useRouter } from "next/router";
 import { loginPage } from "../public/locales/fa.json";
 //import { en } from "../public/locales/en";
 
-type propsList = {
+type PropsList = {
   handleListCompany: () => void;
   handleLoginPage: () => void;
 };
 
-const LoginPage: React.FC<propsList> = (props) => {
+const LoginPage: React.FC<PropsList> = (props) => {
   const [testName, setTestName] = useState<string | number>();
   const [testPassword, setTestPassword] = useState<string | number[]>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
 
   let translate = loginPage;
-
-  //////////////change Language
-
-  //const { locale } = useRouter();
-  //let router = useRouter();
-  //const onChangeHandler = () => {
-  // switch (locale) {
-  //   case "fa":
-  //   router.push("/", "/", { locale: "en-US" });
-  //    break;
-  //  case "en-US":
-  //   router.push("/", "/", { locale: "fa" });
-  //  break;
-  // }
-  // };
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestName(event.target.value);
@@ -42,10 +27,10 @@ const LoginPage: React.FC<propsList> = (props) => {
     setTestPassword(event.target.value);
   };
 
-  const pageHandler = () => {
-    props.handleLoginPage();
-    console.log("hi ");
-  };
+  //const pageHandler = () => {
+  // props.handleLoginPage();
+  // console.log("hi ");
+  // };
 
   const onLogin = (event: React.FormEvent) => {
     event.preventDefault();
