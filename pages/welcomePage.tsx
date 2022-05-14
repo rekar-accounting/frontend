@@ -4,7 +4,7 @@ import React, { ChangeEvent, useState } from "react";
 import ErrorModalHandler from "../components/ErrorModalHandler";
 import { welcomePage as translate } from "../public/locales/fa.json";
 
-type propsLiPropsst = {
+type Props = {
   handleNextLoginPage: () => void;
 };
 
