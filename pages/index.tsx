@@ -26,15 +26,15 @@ const Home: NextPage = () => {
           <a href="/" className="p-1 sm:p-2">{" "}خانه{" "}</a>
         </div>
         <Image
-          src="/IMG/rekar-logotype.svg"
+          src="/assets/images/rekar-logotype.svg"
           alt="Picture of the author"
           width={80}
           height={50}
         />
       </nav>
       <div className=" mt-16 flex flex-wrap justify-center md:flex-nowrap lg:flex-nowrap lg:ml-10 ">
-        <div className="border-2 border-none w-80 mr-7 text-center">
-          <img className=" mx-auto pt-14" src="IMG/rekar-logo.svg" />
+        <div className="border-2 border-none w-80 mr-7 text-center pt-14">
+          <Image src="/assets/images/rekar-logo.svg" width={100} height={100} />
           <h1 className=" text-center font-bold text-purple-900 pt-4"> دسترسی بینهایت به سیستم </h1>
           <p className="text-xs text-center text-slate-400"> با افتتاح حساب در سیستم جامع حسابداری ریکار ، از هرجا و با استفاده از هر دیوایس میتوانید به راحتی وارد داشبورد حساب خود شده و به آسانی به تمامی داده ها دسترسی داشته باشی </p>
           <button className=" bg-violet-900 rounded-lg w-48 h-10 mt-6 text-white ">
@@ -42,17 +42,17 @@ const Home: NextPage = () => {
           </button>
         </div>
         <div className="flex justify-end w-4/5 pt-10 pr-10">
-          <Image src="/IMG/bank-artwork.svg" width={500} height={400}/>
+          <Image src="/assets/images/bank-artwork.svg" width={500} height={400}/>
         </div>
       </div>
       <div className="flex flex-wrap justify-center mt-16 md:flex-nowrap lg:justify-around mx-auto ">
-        <Card Image="/IMG/security-icon.svg" name=" امنیت " title=" سرورهای ریکار همواره با پشتیبان گیری و آپدیت های مداوم احتمال از دست رفتن اسناد را به صفر میرساند " />
-        <Card Image="/IMG/shuttle-icon.svg" name=" سرعت بالا " title=" سیستم ابری بدن نیاز به داشتن سیستم پیشرفته همواره از سرعت بالایی برخوردار است " />
-        <Card Image="/IMG/support-icon.svg" name=" پشتیبانی " title=" پشتیبانی سریع در 7 روز هفته 24 ساعته " />
+        <Card Image="/assets/images/security-icon.svg" name=" امنیت " title=" سرورهای ریکار همواره با پشتیبان گیری و آپدیت های مداوم احتمال از دست رفتن اسناد را به صفر میرساند " />
+        <Card Image="/assets/images/shuttle-icon.svg" name=" سرعت بالا " title=" سیستم ابری بدن نیاز به داشتن سیستم پیشرفته همواره از سرعت بالایی برخوردار است " />
+        <Card Image="/assets/images/support-icon.svg" name=" پشتیبانی " title=" پشتیبانی سریع در 7 روز هفته 24 ساعته " />
       </div>
       <div>
         <div>
-          <h1 className=" mt-16 text-center text-xl font-bold "> در باره ریکار </h1>
+          <h1 className=" mt-16 text-center text-2xl font-bold pb-7 "> در باره ریکار </h1>
         </div>
         <div className=" mx-8 flex flex-wrap md:flex-nowrap ">
           <p className=" text-center text-sm text-slate-400 m-4 "> از جمله بخش های ریکار میتوان به سیستم حسابداری ِ انبار ِ فروشگاه و... اشاره کرد.در سیستم مبتنی بر وب کاربر بدن نیاز به نصب نرم افزار و تنها وارد شدن به داشبورد خود در هرجا و هر زمان با استفاده از هر دیوایسی می تواند به داده های خود دسترسی داشته باشد </p>
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
             </ul>
           </div>
           <div className="mx-auto  lg:flex lg:justify-end">
-            <Image src="/IMG/people-artwork.svg" alt="people-artwork" width={600} height={500} />
+            <Image src="/assets/images/people-artwork.svg" alt="people-artwork" width={600} height={500} />
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
             </ul>
           </div>
           <div>
-            <Image src="/IMG/rekar-logo.svg" alt="rekar-logo" width={110} height={150} />
+            <Image src="/assets/images/rekar-logo.svg" alt="rekar-logo" width={110} height={150} />
           </div>
         </footer>
         <div className=" border border-none bg-zinc-600 h-12">
