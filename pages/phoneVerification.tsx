@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import ErrorModalHandler from "../components/ErrorModalHandler";
-import { phoneverification as translate } from "../public/locales/fa.json";
+import { phoneVerification as translate } from "../public/locales/fa.json";
 
 const PhoneVerification = () => {
   const [phoneVerification, setPhoneVerification] = useState("");
@@ -30,7 +30,7 @@ const PhoneVerification = () => {
           src="/login-artwork.png"
           height={580}
           width={1260}
-          alt="loginImage"
+          alt=" translate.alt"
           className="mx-auto scale-y-150 bg-white border-2 border-whitet "
         />
       </div>

@@ -58,6 +58,7 @@ const Login: React.FC<Props> = (props) => {
           alt="loginImage"
           className="mx-auto scale-y-150 bg-white border-2 border-whitet "
         />
+        alt
       </div>
       <div className="fixed  w-[1050px] mx-auto mt-24 overflow-hidden h-[547px] bg-white shadow-lg bottom-8 left-36 rounded-2xl ">
         <section className="grid grid-cols-2 px-2 pb-4 sm:grid-rows-1">
@@ -65,7 +66,7 @@ const Login: React.FC<Props> = (props) => {
             <Image
               width={500}
               height={520}
-              alt="صفحه ورود"
+              alt=" translate.alt"
               src="/login-artwork.png "
               className="object-cover w-full "
             />
