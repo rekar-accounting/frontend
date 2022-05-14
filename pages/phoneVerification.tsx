@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import ErrorModalHandler from "../components/errorModalHandler";
+import ErrorModalHandler from "../components/ErrorModalHandler";
 import { phoneverification } from "../public/locales/fa.json";
 
 const PhoneVerification = () => {

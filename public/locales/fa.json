@@ -11,7 +11,7 @@
     "errorUserName": "لطفا نام کاربری خود را وارد نمایید",
     "errorPassword": "لطفا رمز عبور را وارد نمایید",
     "errorPasswordLength": "رمز عبور باید حداقل 6 کاراکتر باشد",
-    "loginTo" : "ورود به"
+    "loginTo": "ورود به"
   },
   "welcomePage": {
     "welcome": "خوش اومدی",

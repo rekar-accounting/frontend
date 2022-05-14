@@ -1,17 +1,15 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import Link from "next/link";
-import ErrorModalHandler from "../components/errorModalHandler";
-import { useRouter } from "next/router";
 import { loginPage } from "../public/locales/fa.json";
+import ErrorModalHandler from "../components/ErrorModalHandler";
 //import { en } from "../public/locales/en";
 
-type PropsList = {
+type propsList = {
   handleListCompany: () => void;
   handleLoginPage: () => void;
 };
 
-const LoginPage: React.FC<PropsList> = (props) => {
+const LoginPage: React.FC<propsList> = (props) => {
   const [testName, setTestName] = useState<string | number>();
   const [testPassword, setTestPassword] = useState<string | number[]>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -105,15 +103,13 @@ const LoginPage: React.FC<PropsList> = (props) => {
                   />
                 </div>
               </div>
-              <div className="mt-16 mr-24">
-                <Link href="/phoneVerification">
-                  <button className="w-[72%] py-3 font-bold text-purple-700 border-2 border-purple-700 ">
-                    {translate.login}
-                  </button>
-                </Link>
-              </div>
             </form>
             <div>{check && <ErrorModalHandler title={errorMessage} />}</div>
+            <div className="mt-4 mr-8">
+              <button className="w-[68%] py-3 mr-5 font-bold text-purple-700 border-2 border-purple-700 ">
+                {translate.login}
+              </button>
+            </div>
             <div className="text-purple-700 mx-auto mt-8 text-[15px] text-center ">
               <a href="#" className="inline-block">
                 {translate.Register}

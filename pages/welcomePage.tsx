@@ -1,14 +1,14 @@
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import ErrorModalHandler from "../components/errorModalHandler";
+import ErrorModalHandler from "../components/ErrorModalHandler";
 import { welcomePage } from "../public/locales/fa.json";
 
-type PropsList = {
+type propsList = {
   handleNextLoginPage: () => void;
 };
 
-const WelcomePage: React.FC<PropsList> = (props) => {
+const WelcomePage: React.FC<propsList> = (props) => {
   const [testFirstName, setTestName] = useState<string | number>("");
   const [testLastName, setTestLastName] = useState<string | number>("");
   const [testCompanyName, setTestCompanyName] = useState<string | number>("");

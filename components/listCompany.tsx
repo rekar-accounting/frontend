@@ -1,9 +1,9 @@
 import { listCompany } from "../public/locales/fa.json";
-type PropsLists = {
+type propsList = {
   handleLoginPage: () => void;
 };
 
-const ListCompany: React.FC<PropsLists> = (props) => {
+const ListCompany: React.FC<propsList> = (props) => {
   const translate = listCompany;
 
   return (
