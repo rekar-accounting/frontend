@@ -8,7 +8,7 @@ type Props = {
   handleLoginPage: () => void;
 };
 
-const LoginPage: React.FC<Props> = (props) => {
+const Login: React.FC<Props> = (props) => {
   const [testName, setTestName] = useState<string | number>();
   const [testPassword, setTestPassword] = useState<string | number[]>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -124,4 +124,4 @@ const LoginPage: React.FC<Props> = (props) => {
   );
 };
 
-export default LoginPage;
+export default Login;

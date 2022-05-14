@@ -8,7 +8,7 @@ type Props = {
   handleNextLoginPage: () => void;
 };
 
-const WelcomePage: React.FC<Props> = (props) => {
+const Welcome: React.FC<Props> = (props) => {
   const [testFirstName, setTestName] = useState<string | number>("");
   const [testLastName, setTestLastName] = useState<string | number>("");
   const [testCompanyName, setTestCompanyName] = useState<string | number>("");
@@ -154,4 +154,4 @@ const WelcomePage: React.FC<Props> = (props) => {
   );
 };
 
-export default WelcomePage;
+export default Welcome;
