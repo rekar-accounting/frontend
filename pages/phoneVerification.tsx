@@ -4,18 +4,18 @@ import ErrorModalHandler from "../components/ErrorModalHandler";
 import { phoneverification as translate } from "../public/locales/fa.json";
 
 const PhoneVerification = () => {
-  const [testPhoneVerification, setTestPhoneVerification] = useState("");
+  const [phoneVerification, setPhoneVerification] = useState("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setTestPhoneVerification(event.target.value);
+    setPhoneVerification(event.target.value);
   };
 
   const onLogin = (event: React.FormEvent) => {
     event.preventDefault();
 
-    if (!testPhoneVerification) {
+    if (!phoneVerification) {
       setCheck(true);
       setErrorMessage(translate.errorConfirmVerification);
       return;
