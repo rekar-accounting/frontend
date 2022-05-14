@@ -3,12 +3,12 @@ import React, { ChangeEvent, useState } from "react";
 import { loginPage as translate } from "../public/locales/fa.json";
 import ErrorModalHandler from "../components/ErrorModalHandler";
 
-type propsList = {
+type Props = {
   handleListCompany: () => void;
   handleLoginPage: () => void;
 };
 
-const LoginPage: React.FC<propsList> = (props) => {
+const LoginPage: React.FC<Props> = (props) => {
   const [testName, setTestName] = useState<string | number>();
   const [testPassword, setTestPassword] = useState<string | number[]>("");
   const [errorMessage, setErrorMessage] = useState<string>("");

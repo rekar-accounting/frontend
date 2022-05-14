@@ -1,10 +1,10 @@
 import { listCompany as translate } from "../public/locales/fa.json";
 
-type propsList = {
+type Props = {
   handleLoginPage: () => void;
 };
 
-const ListCompany: React.FC<propsList> = (props) => {
+const ListCompany: React.FC<Props> = (props) => {
   return (
     <div className="fixed inset-0 z-50 bg-gray-600/40">
       <div

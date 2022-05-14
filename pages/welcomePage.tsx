@@ -3,11 +3,12 @@ import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import ErrorModalHandler from "../components/ErrorModalHandler";
 import { welcomePage as translate } from "../public/locales/fa.json";
-type propsList = {
+
+type propsLiPropsst = {
   handleNextLoginPage: () => void;
 };
 
-const WelcomePage: React.FC<propsList> = (props) => {
+const WelcomePage: React.FC<Props> = (props) => {
   const [testFirstName, setTestName] = useState<string | number>("");
   const [testLastName, setTestLastName] = useState<string | number>("");
   const [testCompanyName, setTestCompanyName] = useState<string | number>("");
