@@ -120,11 +120,9 @@ const Welcome: React.FC<Props> = (props) => {
                 <div className="relative">
                   <div dir="rtl" className="flex">
                     <select className="w-[400px] border-4 mb-6 font-semibold appearance-none text-lg focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500  ">
-                      <option value="">{translate["listCompany-first"]}</option>
-                      <option value="">
-                        {translate["listCompany-second"]}
-                      </option>
-                      <option value="">{translate["listCompany-third"]}</option>
+                      <option value="">{translate.listCompanyFirst}</option>
+                      <option value="">{translate.listCompanySecond}</option>
+                      <option value="">{translate.listCompanyThird}</option>
                     </select>
                     <ChevronDownIcon className="absolute w-6 h-6 right-[370px] top-2 text-fuchsia-500" />
                   </div>

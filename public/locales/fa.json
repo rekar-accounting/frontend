@@ -27,9 +27,9 @@
     "errorNameCompany": "لطفا نام شرکت خود را وارد نمایید",
     "errorCompanyActivity": "لطفا نوع فعالیت شرکت را وارد نمایید",
     "TextConfirmation": "با کلیک روی کلید داشبورد تایید میکنید که قوانین و مقررات استفاده از نرم افزار تساوی را خوانده و قبول دارید",
-    "listCompany-first": "حسابداری",
-    "listCompany-second": "بخش انرژی",
-    "listCompany-third": "واردات"
+    "listCompanyFirst": "حسابداری",
+    "listCompanySecond": "بخش انرژی",
+    "listCompanyThird": "واردات"
   },
   "phoneVerification": {
     "title": "تایید شماره تلفن",
