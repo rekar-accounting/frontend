@@ -13,7 +13,7 @@
     "errorPasswordLength": "Password Must Be at Least 6 Characters Long",
     "loginTo": "loginTo"
   },
-  "welcomePage": {
+  "welcome": {
     "welcome": "Your Welocme",
     "details": "Write the details of your business",
     "firstName": "FirstName",

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import { loginPage as translate } from "../public/locales/fa.json";
+import { login as translate } from "../public/locales/fa.json";
 import ErrorModalHandler from "../components/ErrorModalHandler";
 
 type Props = {

@@ -2,7 +2,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import ErrorModalHandler from "../components/ErrorModalHandler";
-import { welcomePage as translate } from "../public/locales/fa.json";
+import { welcome as translate } from "../public/locales/fa.json";
 
 type Props = {
   handleNextLoginPage: () => void;
@@ -10,11 +10,9 @@ type Props = {
 
 const Welcome: React.FC<Props> = (props) => {
   const [testFirstName, setTestName] = useState<string | number>("");
-  const [testLastName, setTestLastName] = useState<string | number>("");
-  const [testCompanyName, setTestCompanyName] = useState<string | number>("");
-  const [testCompanyAction, setTestCompanyAction] = useState<string | number>(
-    ""
-  );
+  const [lastName, setLastName] = useState<string>("");
+  const [companyName, setCompanyName] = useState<string>("");
+  const [companyAction, setCompanyAction] = useState<string>("");
 
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
@@ -24,15 +22,15 @@ const Welcome: React.FC<Props> = (props) => {
   };
 
   const passwordchangehandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setTestLastName(event.target.value);
+    setLastName(event.target.value);
   };
 
   const companyNamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setTestCompanyName(event.target.value);
+    setCompanyName(event.target.value);
   };
 
   const companyActionchangehandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setTestCompanyAction(event.target.value);
+    setCompanyAction(event.target.value);
   };
 
   const onLogin = (event: React.FormEvent) => {
@@ -44,29 +42,25 @@ const Welcome: React.FC<Props> = (props) => {
       return;
     }
 
-    if (!testLastName) {
+    if (!lastName) {
       setCheck(true);
       setErrorMessage(translate.errorLastName);
       return;
     }
 
-    if (!testCompanyName) {
+    if (!companyName) {
       setCheck(true);
       setErrorMessage(translate.errorNameCompany);
       return;
     }
 
-    if (!testCompanyAction) {
+    if (!companyAction) {
       setCheck(true);
       setErrorMessage(translate.errorCompanyActivity);
       return;
     }
 
     setCheck(false);
-
-    //if (testName != null && testPassword != null) {
-    //props.handleListCompany();
-    //}
   };
 
   return (
