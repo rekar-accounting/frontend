@@ -2,8 +2,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import ErrorModalHandler from "../components/ErrorModalHandler";
-import { welcomePage } from "../public/locales/fa.json";
-
+import { welcomePage as translate } from "../public/locales/fa.json";
 type propsList = {
   handleNextLoginPage: () => void;
 };
@@ -18,8 +17,6 @@ const WelcomePage: React.FC<propsList> = (props) => {
 
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
-
-  let translate = welcomePage;
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestName(event.target.value);

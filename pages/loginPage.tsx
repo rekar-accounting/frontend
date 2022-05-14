@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import { loginPage } from "../public/locales/fa.json";
+import { loginPage as translate } from "../public/locales/fa.json";
 import ErrorModalHandler from "../components/ErrorModalHandler";
-//import { en } from "../public/locales/en";
 
 type propsList = {
   handleListCompany: () => void;
@@ -14,8 +13,6 @@ const LoginPage: React.FC<propsList> = (props) => {
   const [testPassword, setTestPassword] = useState<string | number[]>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
-
-  let translate = loginPage;
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestName(event.target.value);

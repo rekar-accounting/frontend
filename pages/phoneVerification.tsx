@@ -1,14 +1,12 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import ErrorModalHandler from "../components/ErrorModalHandler";
-import { phoneverification } from "../public/locales/fa.json";
+import { phoneverification as translate } from "../public/locales/fa.json";
 
 const PhoneVerification = () => {
   const [testPhoneVerification, setTestPhoneVerification] = useState("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
-
-  const translate = phoneverification;
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestPhoneVerification(event.target.value);
