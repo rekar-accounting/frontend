@@ -1,0 +1,65 @@
+[33mcommit a3987bef9fe20edcf697df672d4c08e784b503ea[m[33m ([m[1;36mHEAD -> [m[1;32mrekar-feature-home-page[m[33m)[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Wed May 11 18:34:27 2022 +0430
+
+     Error fixed. The error was related to the parts
+
+[33mcommit 54dabebe1900c1a4e9800303b3f2d1b547861307[m[33m ([m[1;31morigin/rekar-feature-home-page[m[33m)[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Wed May 11 17:21:02 2022 +0430
+
+     change file structure
+
+[33mcommit 826d1609a22111aadecce6d5e5b1926f258581a0[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Tue May 10 11:55:23 2022 +0430
+
+     responsive all
+
+[33mcommit 563e56c9d2b0a03f02fc5d6cc05084e7e6d6fd13[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Mon May 9 13:48:41 2022 +0430
+
+     Responsive and add icon
+
+[33mcommit e5f97286ec2855cca018e2ca43b9b2ae357c5805[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Sun May 8 19:07:18 2022 +0430
+
+     add footer
+
+[33mcommit 98953ab8c88df05ebca3419188fc91d4b2eb18a6[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Sun May 8 17:30:00 2022 +0430
+
+     add slider and form call
+
+[33mcommit 1b6c411d77988dd4da75f8011517ca7fca263c0c[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Sat May 7 14:04:37 2022 +0430
+
+     Component design. About Recar. People-artwork photo
+
+[33mcommit e5be2f547be3fc075d7a5986dc23dd00364a84ea[m
+Author: hazhar ghaderi <hazhar24ghaderi@gmail.com>
+Date:   Thu May 5 18:48:49 2022 +0430
+
+    Navbar construction
+
+[33mcommit ce12580a13405299221886d65f247d4efe59de6c[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: hazharaziz <hazharaziz5555@gmail.com>
+Date:   Thu Mar 31 13:06:48 2022 +0430
+
+    init develop branch
+
+[33mcommit 90fa64522449d2cef56c9282cc11f46e80b0f095[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: hazharaziz <hazharaziz5555@gmail.com>
+Date:   Thu Mar 31 13:00:36 2022 +0430
+
+    update README
+
+[33mcommit 1131c72fb7e5bac267646098cfa74b7ff9e443c2[m
+Author: hazharaziz <hazharaziz5555@gmail.com>
+Date:   Thu Mar 31 12:55:19 2022 +0430
+
+    Initial commit from Create Next App

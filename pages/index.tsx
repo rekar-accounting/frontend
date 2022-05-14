@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import Card from "../components/Card";
-import Hazhar from '../components/Slider'
+import Slider from '../components/Slider'
 import { ImFacebook } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
 import { ImGoogle } from "react-icons/im";
+import Image from "next/image";
+
 
 
 
@@ -24,7 +26,12 @@ const Home: NextPage = () => {
           <a href="/" className="p-1 sm:p-2">{" "}درباره{" "}</a>
           <a href="/" className="p-1 sm:p-2">{" "}خانه{" "}</a>
         </div>
-        <img src="IMG/rekar-logotype.svg" alt="rekarlogotype" />
+        <Image
+          src="/IMG/rekar-logotype.svg"
+          alt="Picture of the author"
+          width={80}
+          height={50}
+        />
       </nav>
       <div className=" mt-16 flex flex-wrap justify-center md:flex-nowrap lg:flex-nowrap lg:ml-10 ">
         <div className="border-2 border-none w-80 mr-7 text-center">
@@ -35,14 +42,14 @@ const Home: NextPage = () => {
             <Link href='/'> خرید حساب کاربری </Link>
           </button>
         </div>
-        <div className="flex justify-center w-4/5 pt-10 pr-10">
-          <img className=" mx-auto ml-16" src="IMG/bank-artwork.svg"/>
+        <div className="flex justify-end w-4/5 pt-10 pr-10">
+          <Image src="/IMG/bank-artwork.svg" width={500} height={400}/>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center mt-16 md:flex-nowrap lg:justify-around ">
-        <Card img="IMG/security-icon.svg" name=" امنیت " title=" سرورهای ریکار همواره با پشتیبان گیری و آپدیت های مداوم احتمال از دست رفتن اسناد را به صفر میرساند " />
-        <Card img="IMG/shuttle-icon.svg" name=" سرعت بالا " title=" سیستم ابری بدن نیاز به داشتن سیستم پیشرفته همواره از سرعت بالایی برخوردار است " />
-        <Card img="IMG/support-icon.svg" name=" پشتیبانی " title=" پشتیبانی سریع در 7 روز هفته 24 ساعته " />
+      <div className="flex flex-wrap justify-center mt-16 md:flex-nowrap lg:justify-around mx-auto ">
+        <Card Image="/IMG/security-icon.svg" name=" امنیت " title=" سرورهای ریکار همواره با پشتیبان گیری و آپدیت های مداوم احتمال از دست رفتن اسناد را به صفر میرساند " />
+        <Card Image="/IMG/shuttle-icon.svg" name=" سرعت بالا " title=" سیستم ابری بدن نیاز به داشتن سیستم پیشرفته همواره از سرعت بالایی برخوردار است " />
+        <Card Image="/IMG/support-icon.svg" name=" پشتیبانی " title=" پشتیبانی سریع در 7 روز هفته 24 ساعته " />
       </div>
       <div>
         <div>
@@ -59,7 +66,7 @@ const Home: NextPage = () => {
       <div>
         <div className="mt-16 flex justify-center flex-wrap lg:flex-nowrap lg:justify-between">
           <div className=" mx-auto text-right lg:pt-14 lg:pl-14">
-            <h1 className=" text-xl font-bold"> چرا ریکار؟ </h1>
+            <h1 className=" text-xl font-bold pt-14"> چرا ریکار؟ </h1>
             <h1 className=" text-4xl text-violet-800 font-bold pt-3"> زیباترین <span className=" text-slate-700"> راه حل </span> </h1>
             <ul>
               <li className=" pt-6 text-sm"> حذف پروسه نصب نرم افزار حسابداری </li>
@@ -68,13 +75,13 @@ const Home: NextPage = () => {
               <li className=" pt-3 text-sm"> پشتیبانی یک ساله </li>
             </ul>
           </div>
-          <div className="mx-auto pt-7 lg:flex lg:justify-end">
-            <img src="IMG/people-artwork.svg" alt="people-artwork" />
+          <div className="mx-auto  lg:flex lg:justify-end">
+            <Image src="/IMG/people-artwork.svg" alt="people-artwork" width={600} height={500} />
           </div>
         </div>
       </div>
       <div>
-        <Hazhar />
+        <Slider />
       </div>
       <div className=" flex flex-wrap justify-center md:flex-nowrap ">
         <form action="">
@@ -92,9 +99,9 @@ const Home: NextPage = () => {
           <div className="col">
             <ul>
               <li className=" text-right text-white "> 
-                <a href='#' > فیسبوک </a><br /><br />
-                <a href='#' > تویتر </a><br /><br />
-                <a href='#' >جی میل </a><br /><br />
+                <a href='https://facebook.com' > فیسبوک </a><br /><br />
+                <a href='https://Twitter.com' > تویتر </a><br /><br />
+                <a href='https://Gmail.com' >جی میل </a><br /><br />
               </li>
             </ul>
           </div>
@@ -122,8 +129,8 @@ const Home: NextPage = () => {
               <Link href='/' > ورود </Link><br />
             </ul>
           </div>
-          <div className="col">
-            <img src="IMG/rekar-logo.svg" alt="" />
+          <div>
+            <Image src="/IMG/rekar-logo.svg" alt="rekar-logo" width={110} height={150} />
           </div>
         </footer>
         <div className=" border border-none bg-zinc-600 h-12">
