@@ -9,46 +9,41 @@ type Props = {
 };
 
 const Login: React.FC<Props> = (props) => {
-  const [testName, setTestName] = useState<string | number>();
-  const [testPassword, setTestPassword] = useState<string | number[]>("");
+  const [name, setName] = useState<string>();
+  const [password, setPassword] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [check, setCheck] = useState<boolean>(false);
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setTestName(event.target.value);
+    setName(event.target.value);
   };
 
   const passwordchangehandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setTestPassword(event.target.value);
+    setPassword(event.target.value);
   };
-
-  //const pageHandler = () => {
-  // props.handleLoginPage();
-  // console.log("hi ");
-  // };
 
   const onLogin = (event: React.FormEvent) => {
     event.preventDefault();
 
-    if (!testName) {
+    if (!name) {
       setCheck(true);
       setErrorMessage(translate.errorUserName);
       return;
     }
 
-    if (!testPassword) {
+    if (!password) {
       setCheck(true);
       setErrorMessage(translate.errorPassword);
       return;
     }
 
-    if (testPassword.length <= 6) {
+    if (password.length <= 6) {
       setErrorMessage(translate.errorPasswordLength);
       return;
     }
     setCheck(false);
 
-    if (testName != null && testPassword != null) {
+    if (name != null && password != null) {
       props.handleListCompany();
     }
   };
