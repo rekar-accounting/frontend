@@ -9,7 +9,6 @@ import Image from "next/image";
 
 
 
-
 const Home: NextPage = () => {
   return (
     <div className=" mx-auto mb-20 mt-5 md:container md:w-2/3 lg:w-2/3 ">
