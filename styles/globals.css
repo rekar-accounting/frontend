@@ -10,14 +10,14 @@
 
 @layer base {
   @font-face {
-    font-family: "IranNastaliq";
+    font-family: "VazirBoldFDWOL";
 
     font-weight: 700;
-    src: url("/fonts/IranNastaliq.ttf") format("truetype");
+    src: url("/Vazir.ttf") format("truetype");
   }
 }
 
 body {
-  font-family: "BNazanin";
+  font-family: "Vazir";
   font-weight: 600;
 }

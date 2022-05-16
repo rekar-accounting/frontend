@@ -25,7 +25,6 @@
     "errorFirstName": "Please enter your name",
     "errorLastName": "Please enter your last name",
     "errorNameCompany": "Please enter your company name",
-    "errorCompanyActivity": "Please enter the type of activity of the company",
     "TextConfirmation": "By clicking on the dashboard button, you confirm that you have read and accept the terms and conditions of using the equality software.",
     "listCompany-first": "Accounting",
     "listCompany-second": "Energy Section",

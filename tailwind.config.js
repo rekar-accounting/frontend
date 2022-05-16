@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        BNazanin: "BNazanin",
+        VazirBoldFDWOL: "Vazir-Bold-FD-WOL",
       },
     },
   },

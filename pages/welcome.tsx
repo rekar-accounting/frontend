@@ -1,8 +1,9 @@
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import ErrorModalHandler from "../components/ErrorModalHandler";
 import { welcome as translate } from "../public/locales/fa.json";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type Props = {
   handleNextLoginPage: () => void;
@@ -14,8 +15,17 @@ const Welcome: React.FC<Props> = (props) => {
   const [companyName, setCompanyName] = useState<string>("");
   const [companyAction, setCompanyAction] = useState<string>("");
 
-  const [errorMessage, setErrorMessage] = useState<string>("");
-  const [check, setCheck] = useState<boolean>(false);
+  const notify = (message: string) => {
+    toast.error(message, {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
 
   const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestName(event.target.value);
@@ -37,30 +47,19 @@ const Welcome: React.FC<Props> = (props) => {
     event.preventDefault();
 
     if (!testFirstName) {
-      setCheck(true);
-      setErrorMessage(translate.errorFirstName);
+      notify(translate.errorFirstName);
       return;
     }
 
     if (!lastName) {
-      setCheck(true);
-      setErrorMessage(translate.errorLastName);
+      notify(translate.errorLastName);
       return;
     }
 
     if (!companyName) {
-      setCheck(true);
-      setErrorMessage(translate.errorNameCompany);
+      notify(translate.errorNameCompany);
       return;
     }
-
-    if (!companyAction) {
-      setCheck(true);
-      setErrorMessage(translate.errorCompanyActivity);
-      return;
-    }
-
-    setCheck(false);
   };
 
   return (
@@ -96,7 +95,7 @@ const Welcome: React.FC<Props> = (props) => {
                 <div dir="rtl">
                   <input
                     type="text"
-                    className="w-[400px] mb-6 font-semibold	  	 text-lg  focus:outline-none border-4 border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500"
+                    className="w-[400px] mb-6 text-xs focus:outline-none border-2 border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500"
                     placeholder={translate.firstName}
                     onChange={usernamechangehandler}
                   />
@@ -104,7 +103,7 @@ const Welcome: React.FC<Props> = (props) => {
                 <div dir="rtl">
                   <input
                     type="text"
-                    className="w-[400px] border-4 mb-6 font-semibold		 text-lg focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
+                    className="w-[400px] border-2 mb-6 text-xs focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
                     placeholder={translate.lastName}
                     onChange={passwordchangehandler}
                   />
@@ -112,31 +111,31 @@ const Welcome: React.FC<Props> = (props) => {
                 <div dir="rtl">
                   <input
                     type="text"
-                    className="w-[400px] border-4 mb-6 font-semibold		 text-lg focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
+                    className="w-[400px] border-2 mb-6  first-letter:text-xs focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500 "
                     placeholder={translate.companyName}
                     onChange={companyNamechangehandler}
                   />
                 </div>
                 <div className="relative">
                   <div dir="rtl" className="flex">
-                    <select className="w-[400px] border-4 mb-6 font-semibold appearance-none text-lg focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500  ">
+                    <select className="w-[400px] border-2 mb-6  appearance-none text-xs focus:outline-none border-t-0 border-l-0 border-r-0 login border-b-fuchsia-500  ">
                       <option value="">{translate.listCompanyFirst}</option>
                       <option value="">{translate.listCompanySecond}</option>
                       <option value="">{translate.listCompanyThird}</option>
                     </select>
-                    <ChevronDownIcon className="absolute w-6 h-6 right-[370px] top-2 text-fuchsia-500" />
+                    <ChevronDownIcon className="absolute w-6 h-6 right-[370px] top-0 text-fuchsia-500" />
                   </div>
                 </div>
-                <div>{check && <ErrorModalHandler title={errorMessage} />}</div>
                 <div className="mt-2 mr-12">
-                  <button className="w-[72%] py-3 font-bold text-purple-700 border-2 border-purple-700 ">
+                  <button className="w-[72%] py-3  text-purple-700 border-2 border-purple-700 ">
                     {translate.login}
                   </button>
+                  <ToastContainer />
                 </div>
               </div>
             </form>
             <div className="mx-auto mt-5 w-96">
-              <p className="text-sm ">{translate.TextConfirmation}</p>
+              <p className="text-xs ">{translate.TextConfirmation}</p>
             </div>
           </div>
         </section>
