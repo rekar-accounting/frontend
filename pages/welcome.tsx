@@ -13,7 +13,6 @@ const Welcome: React.FC<Props> = (props) => {
   const [testFirstName, setTestName] = useState<string | number>("");
   const [lastName, setLastName] = useState<string>("");
   const [companyName, setCompanyName] = useState<string>("");
-  const [companyAction, setCompanyAction] = useState<string>("");
 
   const notify = (message: string) => {
     toast.error(message, {
@@ -37,10 +36,6 @@ const Welcome: React.FC<Props> = (props) => {
 
   const companyNamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setCompanyName(event.target.value);
-  };
-
-  const companyActionchangehandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setCompanyAction(event.target.value);
   };
 
   const onLogin = (event: React.FormEvent) => {
