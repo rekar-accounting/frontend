@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import { login } from "../public/locales/fa.json";
+import { login as translate } from "../public/locales/fa.json";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -22,7 +22,7 @@ const Login = () => {
       autoClose: 4000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: true,
+      pauseOnHover: false,
       draggable: true,
       progress: undefined,
     });
@@ -32,86 +32,88 @@ const Login = () => {
     event.preventDefault();
 
     if (!name) {
-      notify(login.errorUserName);
+      notify(translate.errorUserName);
       return;
     }
 
     if (!password) {
-      notify(login.errorPassword);
+      notify(translate.errorPassword);
       return;
     }
 
     if (password.length <= 6) {
-      notify(login.errorPasswordLength);
+      notify(translate.errorPasswordLength);
       return;
     }
   };
 
   return (
     <>
-      <div className="fixed mx-auto mt-12 blur-sm md:visible">
+      <div className="invisible md:visible">
         <Image
           src="/login-artwork.png"
-          height={580}
-          width={1260}
-          alt={login.alt}
-          className="mx-auto scale-y-150 bg-white border-2 border-whitet "
+          layout="fill"
+          objectFit="fill"
+          quality={100}
+          alt={translate.alt}
+          className="mx-auto scale-y-150 bg-white border-2 border-whitet blur-lg"
         />
       </div>
-      <div className="absolute mx-auto  max-w-[1050px] mt-24 overflow-hidden bg-white shadow-lg bottom-8 left-36 rounded-2xl ">
-        <section className="flex flex-col-reverse ml-40 text-center  sm:w-[600px]  md:w-[1050px] md:mx-auto md:flex-row">
-          <div className="w-[60%] md:[50%]">
+      <div className="sticky my-20 overflow-hidden bg-white md:w-4/5 md:mx-auto rounded-2xl">
+        <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
+          <div className="">
             <Image
-              width={500}
-              height={520}
-              alt={login.alt}
+              width={600}
+              height={560}
+              alt={translate.alt}
               src="/login-artwork.png"
               className=""
             />
           </div>
-          <div className="w-[70%] md:w-[50%] pb-40 p:pb-0 md:pt-8">
+          <div className="w-[50%] md:w-[60%] pb-40 p:pb-0 md:pt-8">
             <p className="mb-8 text-2xl font-bold text-center text-purple-700 login">
-              {login.welcome}
+              {translate.welcome}
             </p>
 
-            <p className="text-base text-center ">{login.details}</p>
+            <p className="text-base text-center ">{translate.details}</p>
             <form onSubmit={onLogin} className="text-center ">
               <div className="pr-5 pt-7">
                 <div dir="rtl">
                   <input
                     type="text"
-                    className="w-full md:w-[90%] mb-6 text-xs  border-2 border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
-                    placeholder={login.userName}
+                    className="w-full md:w-[70%] focus:text-base  mb-6 text-sm  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
+                    placeholder={translate.userName}
                     onChange={usernamechangehandler}
                   />
                 </div>
                 <div dir="rtl">
                   <input
                     type="password"
-                    className="w-full md:w-[90%] mb-6 text-xs  border-2 border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
-                    placeholder={login.password}
+                    className="w-full md:w-[70%] focus:text-base  mb-6 text-sm border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
+                    placeholder={translate.password}
                     onChange={passwordchangehandler}
                   />
                 </div>
               </div>
               <div className="text-center pt-7">
-                <button className="w-[68%] py-3 mr-5  text-purple-700 border-2 border-purple-700 ">
-                  {login.login}
+                <button className="w-[68%]  py-3 mr-5  bg-purple-700 text-white border-2 border-purple-700">
+                  {translate.login}
                 </button>
                 <ToastContainer />
               </div>
             </form>
-            <div className="text-purple-700 mx-auto mt-12 text-[15px] text-center ">
+            <div className="text-purple-700 mx-auto mt-20 text-[15px] text-center ">
               <a href="#" className="inline-block">
-                {login.Register}
+                {translate.Register}
               </a>
               <p className="inline-block mx-1.5	">|</p>
               <a href="#" className="inline-block">
-                {login.forgetPassword}
+                {translate.forgetPassword}
               </a>
             </div>
           </div>
         </section>
+        <div className="w-full h-2 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500"></div>
       </div>
     </>
   );

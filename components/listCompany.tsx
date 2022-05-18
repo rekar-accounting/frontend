@@ -1,10 +1,6 @@
 import { listCompany as translate } from "../public/locales/fa.json";
 
-type Props = {
-  handleLoginPage: () => void;
-};
-
-const ListCompany: React.FC<Props> = (props) => {
+const ListCompany = () => {
   return (
     <div className="fixed inset-0 z-50 bg-gray-600/40">
       <div
@@ -17,12 +13,12 @@ const ListCompany: React.FC<Props> = (props) => {
           </p>
         </div>
         <div>
-          <select className=" py-2.5 appearance-none rounded-lg  mb-5 w-[410px] mx-auto mt-3 mr-3   bg-slate-100 border-[3px] border-purple-700">
+          <select className=" py-2.5  rounded-lg  mb-5 w-[410px] mx-auto mt-3 mr-3   bg-slate-100 border-[3px] border-purple-700">
             <option>{translate.companys}</option>
           </select>
         </div>
         <div>
-          <select className=" py-2.5 appearance-none rounded-lg  font-BNazanin mb-5 w-[410px] mx-auto mt-3 mr-3 bg-slate-100 border-[3px] border-purple-700">
+          <select className=" py-2.5  rounded-lg  font-BNazanin mb-5 w-[410px] mx-auto mt-3 mr-3 bg-slate-100 border-[3px] border-purple-700">
             <option>{translate.fiscalYear}</option>
           </select>
         </div>
@@ -30,10 +26,7 @@ const ListCompany: React.FC<Props> = (props) => {
           <button className="mb-3 mr-5 font-bold text-purple-500">
             {translate.select}
           </button>
-          <button
-            onClick={props.handleLoginPage}
-            className="mb-3 ml-5 font-bold text-black-500"
-          >
+          <button className="mb-3 ml-5 font-bold text-black-500">
             {translate.cancle}
           </button>
         </div>
