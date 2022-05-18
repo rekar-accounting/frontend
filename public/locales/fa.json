@@ -13,7 +13,7 @@
     "errorPasswordLength": "رمز عبور باید حداقل 6 کاراکتر باشد",
     "loginTo": "ورود به"
   },
-  "welcomeUN": {
+  "welcome": {
     "welcome": "خوش اومدی",
     "details": "مشخصات بیزینست رو بنویس",
     "firstName": "نام",
