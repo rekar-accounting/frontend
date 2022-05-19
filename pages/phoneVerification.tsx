@@ -48,13 +48,13 @@ const PhoneVerification = () => {
         <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
           <div className="">
             <Image
-              width={600}
-              height={560}
+              width={640}
+              height={660}
               alt="صفحه ورود"
               src="/login-artwork.png"
             />
           </div>
-          <div className="w-[50%] md:w-[60%] pb-40 p:pb-0 md:pt-8 ">
+          <div className="w-[55%] md:w-[48%] pb-40 p:pb-0 md:pt-8 ">
             <p className="mb-8 text-2xl font-bold text-center text-purple-700 login">
               {translate.title}
             </p>
@@ -67,13 +67,13 @@ const PhoneVerification = () => {
                 <div dir="rtl">
                   <input
                     type="text"
-                    className="w-full md:w-[70%] focus:text-base  my-6 text-sm  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
+                    className="w-full md:w-[70%] my-6 text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
                     placeholder={translate.authenticationCode}
                     onChange={usernamechangehandler}
                   />
                 </div>
                 <div className="pt-5 pb-8 mt-10 text-center">
-                  <button className="w-[68%]  py-3 bg-purple-700 text-white border-2 border-purple-700">
+                  <button className="w-[68%]  py-4 bg-purple-700 text-white border-2 border-purple-700">
                     {translate.login}
                   </button>
                   <ToastContainer />

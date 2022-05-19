@@ -63,25 +63,25 @@ const Login = () => {
         <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
           <div className="">
             <Image
-              width={600}
-              height={560}
+              width={640}
+              height={660}
               alt={translate.alt}
               src="/login-artwork.png"
               className=""
             />
           </div>
-          <div className="w-[50%] md:w-[60%] pb-40 p:pb-0 md:pt-8">
-            <p className="mb-8 text-2xl font-bold text-center text-purple-700 login">
+          <div className="w-[55%] md:w-[48%] pb-40 p:pb-0 md:pt-8">
+            <p className="mb-8 text-3xl font-bold text-center text-purple-700 login">
               {translate.welcome}
             </p>
 
             <p className="text-base text-center ">{translate.details}</p>
             <form onSubmit={onLogin} className="text-center ">
-              <div className="pr-5 pt-7">
+              <div className="pt-10 pr-5">
                 <div dir="rtl">
                   <input
                     type="text"
-                    className="w-full md:w-[70%] focus:text-base  mb-6 text-sm  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
+                    className="w-full md:w-[70%]  mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
                     placeholder={translate.userName}
                     onChange={usernamechangehandler}
                   />
@@ -89,14 +89,14 @@ const Login = () => {
                 <div dir="rtl">
                   <input
                     type="password"
-                    className="w-full md:w-[70%] focus:text-base  mb-6 text-sm border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
+                    className="w-full md:w-[70%]   mb-6 text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
                     placeholder={translate.password}
                     onChange={passwordchangehandler}
                   />
                 </div>
               </div>
-              <div className="text-center pt-7">
-                <button className="w-[68%]  py-3 mr-5  bg-purple-700 text-white border-2 border-purple-700">
+              <div className="pt-10 text-center">
+                <button className="w-[68%]  py-4 mr-5  bg-purple-700 text-white border-2 border-purple-700">
                   {translate.login}
                 </button>
                 <ToastContainer />
