@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
-import type { NextPage } from "next";
 
-const Slider : NextPage = () => {
+const Slider = () => {
     return (
 		<div className='my-24'>
             <h2 className='text-center text-xl font-bold'> مشتریان ما </h2>
