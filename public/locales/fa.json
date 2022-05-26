@@ -1,0 +1,48 @@
+{
+  "login": {
+    "welcome": "ورود",
+    "details": "مشخصات کاربری خود را وارد نمایید",
+    "userName": "نام کاربری",
+    "password": "رمز عبور",
+    "login": "ورود به داشبورد",
+    "alt": "تصویر ورود",
+    "register": "رمز عبورت یادت نیست؟",
+    "forgetPassword": "ثبت نام نکردی؟",
+    "errorUserName": "لطفا نام کاربری خود را وارد نمایید",
+    "errorPassword": "لطفا رمز عبور را وارد نمایید",
+    "errorPasswordLength": "رمز عبور باید حداقل 6 کاراکتر باشد",
+    "loginTo": "ورود به"
+  },
+  "welcome": {
+    "welcome": "خوش اومدی",
+    "details": "مشخصات بیزینست رو بنویس",
+    "firstName": "نام",
+    "alt": "تصویر ورود",
+    "lastName": "نام خانوادگی",
+    "companyName": "نام شرکت",
+    "CompanyActivity": "نوع فعالیت شرکت",
+    "login": "ورود به داشبورد",
+    "errorFirstName": "لطفا نام  خود را وارد نمایید",
+    "errorLastName": "لطفا نام خانوادگی را وارد نمایید",
+    "errorNameCompany": "لطفا نام شرکت خود را وارد نمایید",
+    "textConfirmation": "با کلیک روی کلید داشبورد تایید میکنید که قوانین و مقررات استفاده از نرم افزار تساوی را خوانده و قبول دارید",
+    "listCompanyFirst": "حسابداری",
+    "listCompanySecond": "بخش انرژی",
+    "listCompanyThird": "واردات"
+  },
+  "phoneVerification": {
+    "title": "تایید شماره تلفن",
+    "confirmVerification": "کد دریافتی را در کادر زیر دریافت کنید",
+    "alt": "تصویر ورود",
+    "authenticationCode": "کد تایید هویت",
+    "errorConfirmVerification": "لطفا کد تایید هویت را وارد نمایید",
+    "login": "تایید"
+  },
+  "listCompany": {
+    "listCompanys": "لیست شرکت ها",
+    "companys": "(ثبت 2308)شرکت پاک تدبیر مکریان",
+    "fiscalYear": "سال مالی 1401",
+    "select": "انتخاب",
+    "cancel": "انصراف"
+  }
+}
