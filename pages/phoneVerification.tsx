@@ -19,7 +19,7 @@ const PhoneVerification = () => {
     });
   };
 
-  const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const userNameChangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setPhoneVerification(event.target.value);
   };
 
@@ -44,7 +44,7 @@ const PhoneVerification = () => {
           className="mx-auto scale-y-150 bg-white border-2 border-whitet blur-lg"
         />
       </div>
-      <div className="sticky my-20 overflow-hidden bg-white md:w-4/5 md:mx-auto rounded-2xl ">
+      <div className="sticky my-20 overflow-hidden bg-white md:w-3/4 md:mx-auto rounded-2xl ">
         <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
           <div className="">
             <Image
@@ -69,7 +69,7 @@ const PhoneVerification = () => {
                     type="text"
                     className="w-full md:w-[70%] my-6 text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
                     placeholder={translate.authenticationCode}
-                    onChange={usernamechangehandler}
+                    onChange={userNameChangehandler}
                   />
                 </div>
                 <div className="pt-5 pb-8 mt-10 text-center">

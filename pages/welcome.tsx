@@ -22,15 +22,15 @@ const Welcome = () => {
     });
   };
 
-  const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const userNameChangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestName(event.target.value);
   };
 
-  const passwordchangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const passwordChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setLastName(event.target.value);
   };
 
-  const companyNamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const companyNameChangehandler = (event: ChangeEvent<HTMLInputElement>) => {
     setCompanyName(event.target.value);
   };
 
@@ -65,7 +65,7 @@ const Welcome = () => {
           className="mx-auto scale-y-150 bg-white border-2 border-whitet blur-lg"
         />
       </div>
-      <div className="sticky my-20 overflow-hidden bg-white md:w-4/5 md:mx-auto rounded-2xl ">
+      <div className="sticky my-20 overflow-hidden bg-white md:w-3/4 md:mx-auto rounded-2xl ">
         <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
           <div className="">
             <Image
@@ -88,7 +88,7 @@ const Welcome = () => {
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
                     placeholder={translate.firstName}
-                    onChange={usernamechangehandler}
+                    onChange={userNameChangehandler}
                   />
                 </div>
                 <div dir="rtl">
@@ -96,7 +96,7 @@ const Welcome = () => {
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
                     placeholder={translate.lastName}
-                    onChange={passwordchangehandler}
+                    onChange={passwordChangeHandler}
                   />
                 </div>
                 <div dir="rtl">
@@ -104,7 +104,7 @@ const Welcome = () => {
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
                     placeholder={translate.companyName}
-                    onChange={companyNamechangehandler}
+                    onChange={companyNameChangehandler}
                   />
                 </div>
                 <div className="relative my-6">

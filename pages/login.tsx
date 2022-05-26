@@ -8,11 +8,11 @@ const Login = () => {
   const [name, setName] = useState<string>();
   const [password, setPassword] = useState<string>("");
 
-  const usernamechangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const userNamechangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
 
-  const passwordchangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const passwordChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
 
@@ -49,17 +49,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="invisible md:visible">
-        <Image
-          src="/login-artwork.png"
-          layout="fill"
-          objectFit="fill"
-          quality={100}
-          alt={translate.alt}
-          className="mx-auto scale-y-150 bg-white border-2 border-whitet blur-lg"
-        />
-      </div>
-      <div className="sticky my-20 overflow-hidden bg-white md:w-4/5 md:mx-auto rounded-2xl">
+      <div className="sticky my-20 overflow-hidden bg-white md:w-3/4 md:mx-auto rounded-2xl">
         <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
           <div className="">
             <Image
@@ -70,7 +60,7 @@ const Login = () => {
               className=""
             />
           </div>
-          <div className="w-[55%] md:w-[48%] pb-40 p:pb-0 md:pt-8">
+          <div className="w-[55%] md:w-[55%] pb-40 p:pb-0 md:pt-8">
             <p className="mb-8 text-3xl font-bold text-center text-purple-700 login">
               {translate.welcome}
             </p>
@@ -83,7 +73,7 @@ const Login = () => {
                     type="text"
                     className="w-full md:w-[70%]  mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
                     placeholder={translate.userName}
-                    onChange={usernamechangehandler}
+                    onChange={userNamechangeHandler}
                   />
                 </div>
                 <div dir="rtl">
@@ -91,7 +81,7 @@ const Login = () => {
                     type="password"
                     className="w-full md:w-[70%]   mb-6 text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
                     placeholder={translate.password}
-                    onChange={passwordchangehandler}
+                    onChange={passwordChangeHandler}
                   />
                 </div>
               </div>
