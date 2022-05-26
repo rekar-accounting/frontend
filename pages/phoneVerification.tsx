@@ -51,7 +51,7 @@ const PhoneVerificationPage: NextPage = () => {
               width={640}
               height={600}
               alt={translate.phoneVerification.alt}
-              src="/assets/images/signup-artwork.png  "
+              src="/assets/images/verification-artwork.png  "
             />
           </div>
           <div className="w-[55%] md:w-[48%] pb-40 p:pb-0 md:pt-8 ">
