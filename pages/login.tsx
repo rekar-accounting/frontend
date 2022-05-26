@@ -1,10 +1,11 @@
+import type { NextPage } from "next";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
 import { login as translate } from "../public/locales/fa.json";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Login = () => {
+const LoginPage: NextPage = () => {
   const [name, setName] = useState<string>();
   const [password, setPassword] = useState<string>("");
 
@@ -49,12 +50,22 @@ const Login = () => {
 
   return (
     <>
-      <div className="sticky my-20 overflow-hidden bg-white md:w-3/4 md:mx-auto rounded-2xl">
+      <div className="invisible md:visible">
+        <Image
+          src="/login-artwork.png"
+          layout="fill"
+          objectFit="fill"
+          quality={100}
+          alt={translate.alt}
+          className="mx-auto scale-y-150 bg-white border-2 border-whitet blur-lg"
+        />
+      </div>
+      <div className="sticky my-10 overflow-hidden bg-white md:w-3/4 md:mx-auto rounded-2xl">
         <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
           <div className="">
             <Image
               width={640}
-              height={660}
+              height={600}
               alt={translate.alt}
               src="/login-artwork.png"
               className=""
@@ -86,7 +97,7 @@ const Login = () => {
                 </div>
               </div>
               <div className="pt-10 text-center">
-                <button className="w-[68%]  py-4 mr-5  bg-purple-700 text-white border-2 border-purple-700">
+                <button className="w-[68%]  py-2 mr-5  bg-purple-700 text-white border-2 border-purple-700">
                   {translate.login}
                 </button>
                 <ToastContainer />
@@ -109,4 +120,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

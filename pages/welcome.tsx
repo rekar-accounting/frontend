@@ -1,3 +1,4 @@
+import { NextPage } from "next";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
@@ -5,7 +6,7 @@ import { welcome as translate } from "../public/locales/fa.json";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Welcome = () => {
+const WelcomePage: NextPage = () => {
   const [testFirstName, setTestName] = useState<string | number>("");
   const [lastName, setLastName] = useState<string>("");
   const [companyName, setCompanyName] = useState<string>("");
@@ -65,12 +66,12 @@ const Welcome = () => {
           className="mx-auto scale-y-150 bg-white border-2 border-whitet blur-lg"
         />
       </div>
-      <div className="sticky my-20 overflow-hidden bg-white md:w-3/4 md:mx-auto rounded-2xl ">
+      <div className="sticky my-1 overflow-hidden bg-white md:w-3/4 md:mx-auto rounded-2xl ">
         <section className="flex flex-col-reverse items-center justify-between shadow-xl md:flex-row md:items-center">
           <div className="">
             <Image
               width={640}
-              height={660}
+              height={600}
               alt={translate.alt}
               src="/login-artwork.png"
               className=""
@@ -136,4 +137,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default WelcomePage;
