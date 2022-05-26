@@ -22,7 +22,7 @@ const WelcomePage: NextPage = () => {
     });
   };
 
-  const userNameChangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const userNameChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setTestName(event.target.value);
   };
 
@@ -30,7 +30,7 @@ const WelcomePage: NextPage = () => {
     setLastName(event.target.value);
   };
 
-  const companyNameChangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const companyNameChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setCompanyName(event.target.value);
   };
 
@@ -90,7 +90,7 @@ const WelcomePage: NextPage = () => {
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
                     placeholder={translate.welcome.firstName}
-                    onChange={userNameChangehandler}
+                    onChange={userNameChangeHandler}
                   />
                 </div>
                 <div dir="rtl">
@@ -106,7 +106,7 @@ const WelcomePage: NextPage = () => {
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
                     placeholder={translate.welcome.companyName}
-                    onChange={companyNameChangehandler}
+                    onChange={companyNameChangeHandler}
                   />
                 </div>
                 <div className="relative my-6">

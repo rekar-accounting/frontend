@@ -19,7 +19,7 @@ const PhoneVerificationPage: NextPage = () => {
     });
   };
 
-  const userNameChangehandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const userNameChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setPhoneVerification(event.target.value);
   };
 
@@ -69,7 +69,7 @@ const PhoneVerificationPage: NextPage = () => {
                     type="text"
                     className="w-full md:w-[70%] my-6 text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
                     placeholder={translate.phoneVerification.authenticationCode}
-                    onChange={userNameChangehandler}
+                    onChange={userNameChangeHandler}
                   />
                 </div>
                 <div className="pt-5 pb-8 mt-10 text-center">
