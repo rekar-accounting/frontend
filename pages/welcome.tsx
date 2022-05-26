@@ -2,9 +2,8 @@ import { NextPage } from "next";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import { welcome as translate } from "../public/locales/fa.json";
+import translate from "../public/locales/fa.json";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const WelcomePage: NextPage = () => {
   const [testFirstName, setTestName] = useState<string | number>("");
@@ -39,17 +38,17 @@ const WelcomePage: NextPage = () => {
     event.preventDefault();
 
     if (!testFirstName) {
-      notify(translate.errorFirstName);
+      notify(translate.welcome.errorFirstName);
       return;
     }
 
     if (!lastName) {
-      notify(translate.errorLastName);
+      notify(translate.welcome.errorLastName);
       return;
     }
 
     if (!companyName) {
-      notify(translate.errorNameCompany);
+      notify(translate.welcome.errorNameCompany);
       return;
     }
   };
@@ -58,11 +57,11 @@ const WelcomePage: NextPage = () => {
     <>
       <div className="invisible md:visible">
         <Image
-          src="/login-artwork.png"
+          src="/assets/images/login-artwork.png"
           layout="fill"
           objectFit="fill"
           quality={100}
-          alt={translate.alt}
+          alt={translate.welcome.alt}
           className="mx-auto scale-y-150 bg-white border-2 border-whitet blur-lg"
         />
       </div>
@@ -72,23 +71,25 @@ const WelcomePage: NextPage = () => {
             <Image
               width={640}
               height={600}
-              alt={translate.alt}
-              src="/login-artwork.png"
+              alt={translate.welcome.alt}
+              src="/assets/images/login-artwork.png"
               className=""
             />
           </div>
           <div className="w-[55%] md:w-[48%] pb-32 p:pb-0 md:mt-8 ">
             <p className="mb-8 text-2xl font-bold text-center text-purple-700 login">
-              {translate.welcome}
+              {translate.welcome.welcome}
             </p>
-            <p className="text-base text-center ">{translate.details}</p>
+            <p className="text-base text-center ">
+              {translate.welcome.details}
+            </p>
             <form onSubmit={onLogin} className="text-center ">
               <div className="pr-5 mt-10">
                 <div dir="rtl">
                   <input
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500"
-                    placeholder={translate.firstName}
+                    placeholder={translate.welcome.firstName}
                     onChange={userNameChangehandler}
                   />
                 </div>
@@ -96,7 +97,7 @@ const WelcomePage: NextPage = () => {
                   <input
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
-                    placeholder={translate.lastName}
+                    placeholder={translate.welcome.lastName}
                     onChange={passwordChangeHandler}
                   />
                 </div>
@@ -104,30 +105,36 @@ const WelcomePage: NextPage = () => {
                   <input
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
-                    placeholder={translate.companyName}
+                    placeholder={translate.welcome.companyName}
                     onChange={companyNameChangehandler}
                   />
                 </div>
                 <div className="relative my-6">
                   <div dir="rtl" className="flex ">
                     <select className="w-full mx-auto md:w-[70%]  appearance-none  text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500  ">
-                      <option value="">{translate.listCompanyFirst}</option>
-                      <option value="">{translate.listCompanySecond}</option>
-                      <option value="">{translate.listCompanyThird}</option>
+                      <option value="">
+                        {translate.welcome.listCompanyFirst}
+                      </option>
+                      <option value="">
+                        {translate.welcome.listCompanySecond}
+                      </option>
+                      <option value="">
+                        {translate.welcome.listCompanyThird}
+                      </option>
                     </select>
                     <ChevronDownIcon className="absolute w-8 h-6 left-32 text-fuchsia-500" />
                   </div>
                 </div>
                 <div className="pt-5 pb-8 text-center">
                   <button className="w-[68%]  py-4  bg-purple-700 text-white border-2 border-purple-700">
-                    {translate.login}
+                    {translate.welcome.login}
                   </button>
                   <ToastContainer />
                 </div>
               </div>
             </form>
             <div dir="rtl" className="w-full mt-1 text-center md:mx-auto ">
-              <p className="text-sm ">{translate.TextConfirmation}</p>
+              <p className="text-sm ">{translate.welcome.textConfirmation}</p>
             </div>
           </div>
         </section>
