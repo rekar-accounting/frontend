@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .login {
+    @apply focus:border-b-fuchsia-800;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "VazirBoldFDWOL";
+
+    font-weight: 700;
+    src: url("/Vazir.ttf") format("truetype");
+  }
+}
+
+body {
+  font-family: "Vazir";
+  font-weight: 600;
+}
