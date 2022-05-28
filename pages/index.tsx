@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
-import React, { useState } from "react";
-import Head from "next/head";
+import HomePage from "./home";
 
 const Home: NextPage = () => {
-  return <></>;
+  return (
+    <>
+      <HomePage />
+    </>
+  );
 };
-
 export default Home;
