@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
-import HomePage from "./home";
+import Company from "./Company-Info-Page";
+
 
 const Home: NextPage = () => {
   return (
     <>
-      <HomePage />
+      <Company />
     </>
   );
 };
