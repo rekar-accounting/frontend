@@ -44,5 +44,15 @@
     "fiscalYear": "fiscalYear 1401",
     "select": "select",
     "cancel": "cancle"
+  },
+  "fiscalYear": {
+    "fiscalYear": "Fiscal Year Definition",
+    "descriptionNeeds": "Write The Necessary Description (You Can Change It Later)",
+    "fiscalName": "fiscal name",
+    "dateStart": " Date Start",
+    "dateEnd": " Date End",
+    "login": "Login to Dashboard",
+    "nextStup": "Don't worry ... I'll fill it in later",
+    "alt": "Login Image"
   }
 }
