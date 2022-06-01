@@ -7,7 +7,6 @@ const FiscalYear: NextPage = () => {
   return (
     <div>
       <div className="w-full h-2 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500"></div>
-
       <div className="absolute mt-16 right-4 top-[490px]">
         <Image
           src="/assets/images/gear.png"
@@ -16,12 +15,12 @@ const FiscalYear: NextPage = () => {
           height={350}
         />
       </div>
-      <div className="absolute pt-10 mt-52">
+      <div className="absolute pt-10 mt-44">
         <Image
           src="/assets/images/last.png"
           alt={translate.fiscalYear.alt}
-          width={400}
-          height={350}
+          width={440}
+          height={450}
         />
       </div>
       <div className="mx-auto text-center">
@@ -46,13 +45,21 @@ const FiscalYear: NextPage = () => {
               <select className="w-[19%] ml-5  appearance-none  text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-purple-400 ">
                 <option>{translate.fiscalYear.dateStart}</option>
               </select>
-              <ChevronDownIcon className="absolute w-8 h-6 ml-10 text-fuchsia-500" />
-              <select className=" w-[19%]  appearance-none  text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-purple-400 ">
+              <ChevronDownIcon className="absolute w-8 h-6 ml-20 text-fuchsia-500" />
+              <select className=" w-[20%]  appearance-none  text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-purple-400 ">
                 <option>{translate.fiscalYear.dateEnd}</option>
               </select>
               <ChevronDownIcon className="absolute w-8 h-6 left-[470px] text-fuchsia-500" />
             </div>
+            <div className="pt-3 pb-8 mt-10 text-center ">
+              <button className="w-3/12 py-4 text-purple-700 border-2 border-purple-700 ">
+                {translate.fiscalYear.login}
+              </button>
+            </div>
           </form>
+          <div>
+            <p>{translate.fiscalYear.nextStup}</p>
+          </div>
         </div>
       </div>
     </div>
