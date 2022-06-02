@@ -3,7 +3,8 @@ import Image from "next/image";
 import type { NextPage } from "next";
 import { useState } from "react";
 
-const Company: NextPage = () => {
+const company: NextPage = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [count, setcount] = useState("هنوز هیچ فایلی انتخاب نشده");
   const file = () => {
     setcount("یک فایل انتخاب شد");
@@ -116,4 +117,4 @@ const Company: NextPage = () => {
   );
 };
 
-export default Company;
+export default company;

@@ -9,7 +9,7 @@ import { ImTwitter } from "react-icons/im";
 import { ImGoogle } from "react-icons/im";
 import Image from "next/image";
 
-const HomePage: NextPage = () => {
+const homePage: NextPage = () => {
   return (
     <div className=" mx-auto mb-20 mt-5 md:container md:w-2/3 lg:w-2/3 ">
       <nav className="flex items-center border border-none h-10 sm:w-screen md:container lg:container ">
@@ -276,4 +276,4 @@ const HomePage: NextPage = () => {
     </div>
   );
 };
-export default HomePage;
+export default homePage;

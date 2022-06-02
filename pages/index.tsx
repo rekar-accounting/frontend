@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import Company from "./CompanyInfoPage";
+import company from "./CompanyInfoPage";
 
 
 const Home: NextPage = () => {
   return (
     <>
-      <Company />
+      <company />
     </>
   );
 };
