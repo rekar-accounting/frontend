@@ -46,7 +46,7 @@ const HomePage: NextPage = () => {
             src="/assets/images/rekar-logo.svg"
             width={100}
             height={100}
-            alt=""
+            alt="rekar-logo"
           />
           <h1 className=" text-center font-bold text-purple-900 pt-4">
             {" "}
@@ -67,7 +67,7 @@ const HomePage: NextPage = () => {
             src="/assets/images/bank-artwork.svg"
             width={500}
             height={400}
-            alt=""
+            alt="image-bank artwork"
           />
         </div>
       </div>

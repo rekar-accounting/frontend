@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Company from "./Company-Info-Page";
+import Company from "./CompanyInfoPage";
 
 
 const Home: NextPage = () => {
