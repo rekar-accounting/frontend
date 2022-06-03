@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { NextPage } from "next";
 import Image from "next/image";
 import { ChevronDownIcon } from "@heroicons/react/solid";
@@ -7,7 +8,7 @@ const FiscalYear: NextPage = () => {
   return (
     <div>
       <div className="w-full h-2 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500"></div>
-      <div className="absolute mt-16 right-4 top-[490px]">
+      <div className="invisible md:visible absolute mt-16 right-4 top-[490px]">
         <Image
           src="/assets/images/gear.png"
           alt={translate.fiscalYear.alt}
@@ -15,7 +16,7 @@ const FiscalYear: NextPage = () => {
           height={350}
         />
       </div>
-      <div className="absolute pt-10 mt-44">
+      <div className="absolute invisible pt-10 md:visible mt-44">
         <Image
           src="/assets/images/last.png"
           alt={translate.fiscalYear.alt}
@@ -42,10 +43,9 @@ const FiscalYear: NextPage = () => {
               />
             </div>
             <div className="relative flex justify-center " dir="rtl">
-              <select className="w-[19%] ml-5  appearance-none  text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-purple-400 ">
-                <option>{translate.fiscalYear.dateStart}</option>
+              <select className=" w-[20%]  appearance-none  text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-purple-400 ">
+                <option>{translate.fiscalYear.dateEnd}</option>
               </select>
-              <ChevronDownIcon className="absolute w-8 h-6 ml-20 text-fuchsia-500" />
               <select className=" w-[20%]  appearance-none  text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-purple-400 ">
                 <option>{translate.fiscalYear.dateEnd}</option>
               </select>
