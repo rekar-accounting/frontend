@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 const SignUp: NextPage = () => {
   const [userName, setUserName] = useState<string | number>("");
   const [password, setPassword] = useState<string>("");
-  const [passwordRepet, setPasswordRepet] = useState<string>("");
+  const [passwordRepeat, setPasswordRepeat] = useState<string>("");
   const [phoneNumber, setphoneNumber] = useState<string>("");
 
   const notify = (message: string) => {
@@ -30,8 +30,10 @@ const SignUp: NextPage = () => {
     setPassword(event.target.value);
   };
 
-  const passwordRepetChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    setPasswordRepet(event.target.value);
+  const passwordRepeatChangeHandler = (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    setPasswordRepeat(event.target.value);
   };
 
   const phoneNumberHandler = (event: ChangeEvent<HTMLInputElement>) => {
@@ -55,11 +57,11 @@ const SignUp: NextPage = () => {
       return;
     }
 
-    if (!passwordRepet) {
+    if (!passwordRepeat) {
       notify(translate.signUp.errorPassword);
       return;
     }
-    if (passwordRepet.length <= 6) {
+    if (passwordRepeat.length <= 6) {
       notify(translate.login.errorPasswordLength);
       return;
     }
@@ -120,8 +122,8 @@ const SignUp: NextPage = () => {
                   <input
                     type="text"
                     className="w-full md:w-[70%] mb-6 text-base  border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 "
-                    placeholder={translate.signUp.passwordRepet}
-                    onChange={passwordRepetChangeHandler}
+                    placeholder={translate.signUp.passwordRepeat}
+                    onChange={passwordRepeatChangeHandler}
                   />
                 </div>
                 <div dir="rtl">
