@@ -8,34 +8,35 @@ import { ImFacebook } from "react-icons/im";
 import { ImTwitter } from "react-icons/im";
 import { ImGoogle } from "react-icons/im";
 import Image from "next/image";
+import translate from "../public/locales/en.json";
 
 const homePage: NextPage = () => {
   return (
     <div className=" mx-auto mb-20 mt-5 md:container md:w-2/3 lg:w-2/3 ">
       <nav className="flex items-center border border-none h-10 sm:w-screen md:container lg:container ">
         <div className=" border border-violet-500 w-36 hover:bg-violet-100 h-8 ml-6 rounded-md text-center text-xs text-slate-500 pt-2 md:ml-16">
-          <Link href="/"> افتتاح حساب </Link>
+          <Link href="/">{translate.home.openaccount}</Link>
         </div>
         <div className=" pl-5 text-violet-600 text-sm pb-1">
-          <Link href="/"> ورود </Link>
+          <Link href="/">{translate.home.login}</Link>
         </div>
         <div className="flex text-xs md:justify-around lg:ml-auto lg:mr-10">
           <a href="/" className="p-1 sm:p-2">
-            تماس با ما
+            {translate.home.call}
           </a>
           <a href="/" className="p-1 sm:p-2">
-            چرا ریکار
+            {translate.home.whyRekar1}
           </a>
           <a href="/" className="p-1 sm:p-2">
-            درباره
+            {translate.home.about}
           </a>
           <a href="/" className="p-1 sm:p-2">
-            خانه
+            {translate.home.house}
           </a>
         </div>
         <Image
           src="/assets/images/rekar-logotype.svg"
-          alt="Picture of the author"
+          alt={translate.home.logotype}
           width={80}
           height={50}
         />
@@ -44,106 +45,87 @@ const homePage: NextPage = () => {
         <div className="border-2 border-none w-80 mr-7 text-center pt-14">
           <Image
             src="/assets/images/rekar-logo.svg"
+            alt={translate.home.rekarlogo}
             width={100}
             height={100}
-            alt="rekar-logo"
           />
           <h1 className=" text-center font-bold text-purple-900 pt-4">
-            {" "}
-            دسترسی بینهایت به سیستم{" "}
+            {translate.home.SystemAccess}
           </h1>
           <p className="text-xs text-center text-slate-400">
-            {" "}
-            با افتتاح حساب در سیستم جامع حسابداری ریکار ، از هرجا و با استفاده
-            از هر دیوایس میتوانید به راحتی وارد داشبورد حساب خود شده و به آسانی
-            به تمامی داده ها دسترسی داشته باشی{" "}
+            {translate.home.access}
           </p>
           <button className=" bg-violet-900 rounded-lg w-48 h-10 mt-6 text-white ">
-            <Link href="/"> خرید حساب کاربری </Link>
+            <Link href="/">{translate.home.BuyAccount}</Link>
           </button>
         </div>
         <div className="flex justify-end w-4/5 pt-10 pr-10">
           <Image
             src="/assets/images/bank-artwork.svg"
+            alt={translate.home.artwork}
             width={500}
             height={400}
-            alt="image-bank artwork"
           />
         </div>
       </div>
       <div className="flex flex-wrap justify-center mt-16 md:flex-nowrap lg:justify-around mx-auto ">
         <Card
           Image="/assets/images/security-icon.svg"
-          name=" امنیت "
-          title=" سرورهای ریکار همواره با پشتیبان گیری و آپدیت های مداوم احتمال از دست رفتن اسناد را به صفر میرساند "
+          name={translate.home.Security}
+          title={translate.home.title1}
         />
         <Card
           Image="/assets/images/shuttle-icon.svg"
-          name=" سرعت بالا "
-          title=" سیستم ابری بدن نیاز به داشتن سیستم پیشرفته همواره از سرعت بالایی برخوردار است "
+          name={translate.home.speed}
+          title={translate.home.title2}
         />
         <Card
           Image="/assets/images/support-icon.svg"
-          name=" پشتیبانی "
-          title=" پشتیبانی سریع در 7 روز هفته 24 ساعته "
+          name={translate.home.Support}
+          title={translate.home.title3}
         />
       </div>
       <div>
         <div>
           <h1 className=" mt-16 text-center text-2xl font-bold pb-7 ">
-            {" "}
-            در باره ریکار{" "}
+            {translate.home.aboutRekar1}
           </h1>
         </div>
         <div className=" mx-8 flex flex-wrap md:flex-nowrap ">
           <p className=" text-center text-sm text-slate-400 m-4 ">
-            {" "}
-            از جمله بخش های ریکار میتوان به سیستم حسابداری ِ انبار ِ فروشگاه
-            و... اشاره کرد.در سیستم مبتنی بر وب کاربر بدن نیاز به نصب نرم افزار
-            و تنها وارد شدن به داشبورد خود در هرجا و هر زمان با استفاده از هر
-            دیوایسی می تواند به داده های خود دسترسی داشته باشد{" "}
+            {translate.home.aboutRekar2}
           </p>
           <p className=" text-center text-sm m-4">
-            {" "}
-            ریکار یک سیستم حسابداری مبتنی بر وب هست که تمام داده های شرکت در
-            سرورهای ریکار و در صورت نیاز به صورت لوکال روی سیستم مشتری نصب می
-            ود. ریکار سعی دارد با تکیه بر دانش تیم نرم افزاری خود تمامی بخش های
-            سیستم حسابداری را با ساده ترین راه حل های بصری پوشش داده و کار
-            حسابداری را آسانتر نماید{" "}
+            {translate.home.aboutRekar3}
           </p>
         </div>
       </div>
       <div className=" mt-8 ml-8">
-        <Link href="/"> ... بیشتر </Link>
+        <Link href="/">{translate.home.More}</Link>
       </div>
       <div>
         <div className="mt-16 flex justify-center flex-wrap lg:flex-nowrap lg:justify-between">
           <div className=" mx-auto text-right lg:pt-14 lg:pl-14">
-            <h1 className=" text-xl font-bold pt-14"> چرا ریکار؟ </h1>
+            <h1 className=" text-xl font-bold pt-14">
+              {translate.home.whyRekar2}
+            </h1>
             <h1 className=" text-4xl text-violet-800 font-bold pt-3">
-              {" "}
-              زیباترین <span className=" text-slate-700"> راه حل </span>{" "}
+              {translate.home.thePrettiest}{" "}
+              <span className=" text-slate-700">{translate.home.solution}</span>
             </h1>
             <ul>
-              <li className=" pt-6 text-sm">
-                {" "}
-                حذف پروسه نصب نرم افزار حسابداری{" "}
-              </li>
+              <li className=" pt-6 text-sm">{translate.home.delete}</li>
               <li className=" pt-3 text-sm">
-                {" "}
-                دسترسی به سیستم از هرجا و در هر زمان{" "}
+                {translate.home.AccessApplication}
               </li>
-              <li className=" pt-3 text-sm">
-                {" "}
-                طراحی کاربری فوق العاده مینیمال و کاربردی{" "}
-              </li>
-              <li className=" pt-3 text-sm"> پشتیبانی یک ساله </li>
+              <li className=" pt-3 text-sm">{translate.home.Designing}</li>
+              <li className=" pt-3 text-sm">{translate.home.Support1}</li>
             </ul>
           </div>
           <div className="mx-auto  lg:flex lg:justify-end">
             <Image
               src="/assets/images/people-artwork.svg"
-              alt="people-artwork"
+              alt={translate.home.peopleartwork}
               width={600}
               height={500}
             />
@@ -157,30 +139,29 @@ const homePage: NextPage = () => {
         <form action="">
           <input
             type="email"
-            placeholder=" ایمیل شما "
+            placeholder={translate.home.email}
             required
             className=" text-right w-96 h-10 bg-slate-200 rounded-lg text-xs outline-none px-3 mx-auto"
           />
           <br />
           <input
             type="text"
-            placeholder=" متن پیام "
+            placeholder={translate.home.massageText}
             required
             className=" text-right w-96 h-32 bg-slate-200 mt-4 rounded-lg outline-none pb-24 px-3 text-xs mx-auto"
           />
           <br />
           <input
             type="submit"
-            value=" ارسال "
+            value={translate.home.send}
             className=" border w-96 h-12 mt-4 rounded-lg bg-violet-900 text-white font-bold "
           />
         </form>
         <div className=" text-center pt-9 md:pl-10">
-          <h1 className=" text-2xl font-bold sm:pl-4"> تماس با ما </h1>
-          <p className=" text-slate-500 sm:pl-7">
-            {" "}
-            با استفاده از این فرم با ما در تماس باشید{" "}
-          </p>
+          <h1 className=" text-2xl font-bold sm:pl-4">
+            {translate.home.contactUs}
+          </h1>
+          <p className=" text-slate-500 sm:pl-7">{translate.home.callform}</p>
         </div>
       </div>
       <div className=" w-full my-16 bg-zinc-900 h-64 ">
@@ -188,13 +169,13 @@ const homePage: NextPage = () => {
           <div className="col">
             <ul>
               <li className=" text-right text-white ">
-                <a href="https://facebook.com"> فیسبوک </a>
+                <a href="https://facebook.com">{translate.home.facebook}</a>
                 <br />
                 <br />
-                <a href="https://Twitter.com"> تویتر </a>
+                <a href="https://Twitter.com">{translate.home.twitter}</a>
                 <br />
                 <br />
-                <a href="https://Gmail.com">جی میل </a>
+                <a href="https://Gmail.com">{translate.home.gmail}</a>
                 <br />
                 <br />
               </li>
@@ -218,40 +199,40 @@ const homePage: NextPage = () => {
           </div>
           <div className="col ">
             <ul className=" text-right text-white">
-              <Link href="/"> لینک </Link>
+              <Link href="/">{translate.home.link}</Link>
               <br />
               <br />
-              <Link href="/"> لینک </Link>
+              <Link href="/">{translate.home.link}</Link>
               <br />
               <br />
-              <Link href="/"> لینک </Link>
+              <Link href="/">{translate.home.link}</Link>
               <br />
               <br />
-              <Link href="/"> لینک </Link>
+              <Link href="/">{translate.home.link}</Link>
             </ul>
           </div>
           <div className="col ">
             <ul className=" text-right text-white pb-3">
-              <Link href="/"> خانه </Link>
+              <Link href="/">{translate.home.house}</Link>
               <br />
               <br />
-              <Link href="/"> درباره </Link>
+              <Link href="/">{translate.home.about}</Link>
               <br />
               <br />
-              <Link href="/"> چرا ریکار </Link>
+              <Link href="/">{translate.home.whyRekar1}</Link>
               <br />
               <br />
-              <Link href="/"> تماس با ما </Link>
+              <Link href="/">{translate.home.call}</Link>
               <br />
               <br />
-              <Link href="/"> ورود </Link>
+              <Link href="/">{translate.home.login}</Link>
               <br />
             </ul>
           </div>
           <div>
             <Image
               src="/assets/images/rekar-logo.svg"
-              alt="rekar-logo"
+              alt={translate.home.rekarlogo}
               width={110}
               height={150}
             />
@@ -264,11 +245,11 @@ const homePage: NextPage = () => {
               Copyright @ 2020 , Rekar{" "}
             </p>
             <div className=" text-white text-xs pt-3 pl-44">
-              <Link href="/"> حریم خصوصی کاربری </Link>
+              <Link href="/">{translate.home.privacy}</Link>
               <> </>
             </div>
             <div className=" text-white text-xs pt-3">
-              <Link href="/"> امنیت </Link>
+              <Link href="/">{translate.home.Security}</Link>
             </div>
           </div>
         </div>

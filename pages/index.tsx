@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
-import company from "./CompanyInfoPage";
+import Company from "./companyInfoPage";
 
 
 const Home: NextPage = () => {
   return (
-    <>
-      <company />
-    </>
-  );
+  <>
+    <Company />
+  </>
+  )
 };
 export default Home;
