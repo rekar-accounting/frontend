@@ -6,7 +6,7 @@ import translate from "../public/locales/en.json";
 
 const company: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [count, setcount] = useState<string>  (translate.companyInfoPage.file1);
+  const [count, setcount] = useState<string>(translate.companyInfoPage.file1);
 
   const file = () => {
     setcount(translate.companyInfoPage.file2);
