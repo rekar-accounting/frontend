@@ -30,7 +30,7 @@ const FiscalYear: NextPage = () => {
   return (
     <div>
       <div className="w-full h-1.5 rounded-sm bg-gradient-to-r from-red-500 via-purple-500 to-pink-500"></div>
-      <div className="absolute invisible mt-16 xl:visible right-4 top-72">
+      <div className="absolute invisible mt-16 xl:visible right-4 top-64">
         <Image
           src="/assets/images/gear.png"
           alt={translate.fiscalYear.alt}
@@ -38,7 +38,7 @@ const FiscalYear: NextPage = () => {
           height={350}
         />
       </div>
-      <div className="absolute invisible pt-1 xl:visible mt-44">
+      <div className="absolute invisible pt-1 mt-32 xl:visible">
         <Image
           src="/assets/images/last.png"
           alt={translate.fiscalYear.alt}
