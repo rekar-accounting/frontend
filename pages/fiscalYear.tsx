@@ -11,7 +11,7 @@ const FiscalYear: NextPage = () => {
   const [date, setDate] = useState();
   const [dateEnd, setDateEnd] = useState();
 
-  const chagneCalendarstart = () => {
+  const chagneCalendarStart = () => {
     setChangeDate((curDate) => !curDate);
   };
 
@@ -71,7 +71,7 @@ const FiscalYear: NextPage = () => {
                   type="text"
                   className="w-[100%] appearance-none text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-black "
                   placeholder={translate.fiscalYear.dateStart}
-                  onClick={chagneCalendarstart}
+                  onClick={chagneCalendarStart}
                   value={date}
                 />
                 {changeDate && (
@@ -85,7 +85,7 @@ const FiscalYear: NextPage = () => {
                     />
                     <button
                       className="w-full text-white bg-blue-900 border-2 border-blue-900 md:w-full"
-                      onClick={chagneCalendarstart}
+                      onClick={chagneCalendarStart}
                     >
                       {translate.fiscalYear.Confirmation}
                     </button>
