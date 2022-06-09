@@ -30,7 +30,7 @@ const FiscalYear: NextPage = () => {
   return (
     <div>
       <div className="w-full h-1.5 rounded-sm bg-gradient-to-r from-red-500 via-purple-500 to-pink-500"></div>
-      <div className="absolute invisible mt-16 xl:visible right-4 top-64">
+      <div className="absolute invisible mt-16 2xl:visible right-4 top-64">
         <Image
           src="/assets/images/gear.png"
           alt={translate.fiscalYear.alt}
@@ -38,7 +38,7 @@ const FiscalYear: NextPage = () => {
           height={350}
         />
       </div>
-      <div className="absolute invisible pt-1 mt-32 xl:visible">
+      <div className="absolute invisible pt-1 mt-32 2xl:visible">
         <Image
           src="/assets/images/last.png"
           alt={translate.fiscalYear.alt}
@@ -64,9 +64,12 @@ const FiscalYear: NextPage = () => {
                 placeholder={translate.fiscalYear.fiscalName}
               />
             </div>
-            <div className="flex justify-center gap-6" dir="rtl">
-              <div className="relative w-[19%]">
-                <ChevronDownIcon className="absolute w-8 h-6 right-20 2xl:right-64 text-fuchsia-500" />
+            <div
+              className="flex flex-col items-center gap-6 text-center lg:items-start md:justify-center lg:flex-row"
+              dir="rtl"
+            >
+              <div className="relative w-[40%] lg:w-[19%]">
+                <ChevronDownIcon className="absolute w-8 h-6 right-52 md:right-64 2xl:right-64 lg:right-72 text-fuchsia-500" />
                 <input
                   type="text"
                   className="w-[100%] appearance-none text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-black "
@@ -92,8 +95,8 @@ const FiscalYear: NextPage = () => {
                   </div>
                 )}
               </div>
-              <div className="relative w-[19%]">
-                <ChevronDownIcon className="absolute w-8 h-6 right-20 xl:right-64 text-fuchsia-500" />
+              <div className="relative w-[40%] lg:w-[19%]">
+                <ChevronDownIcon className="absolute w-8 h-6 right-52 md:right-64 2xl:right-64 lg:right-72 text-fuchsia-500" />
                 <input
                   className="w-[100%] appearance-none text-base border-[3px] border-t-0 border-l-0 border-r-0 focus:outline-none login border-b-fuchsia-500 text-black"
                   placeholder={translate.fiscalYear.dateEnd}
